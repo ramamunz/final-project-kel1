@@ -5,11 +5,17 @@ import banner from "../assets/sjblackwidow 1 (1).png";
 import MovieTitle from "../assets/Black_Widow 1.png";
 import Avatar from "../assets/avatar.png";
 import Avegare from "../assets/avengers.png";
-import TopGun from "../assets/top gun maverick.png"
-import Spidermen from "../assets/spider man.png"
-import Warewolf from "../assets/werewolf.png"
+import TopGun from "../assets/top gun maverick.png";
+import Spidermen from "../assets/spider man.png";
+import Warewolf from "../assets/werewolf.png";
+
+import MainContent from "./MainContent/MainContent";
+import Footer from "./Footer/Footer";
+
 
 import { FaStar, FaPlay, FaPlus } from "react-icons/fa";
+
+import "../../src/assets/styles/output.css"
 
 function Home() {
   return (
@@ -94,12 +100,12 @@ function Home() {
 
       {/* banner */}
 
-      <section className=" bg-merah-hati relative w-full h-screen justify-center items-center">
+      <section className=" bg-merah-hati relative w-full h-screen justify-center items-center overflow-hidden">
         <img src={banner} className="absolute object-cover h-screen w-full" />
 
         <div className="relative z-1 w-1/2 py-12 px-12">
           <img src={MarvelLogo} className="py-8 justify-center" />
-          <img src={MovieTitle}  />
+          <img src={MovieTitle} />
 
           {/* rating */}
           <div className="flex items-center pt-3">
@@ -139,52 +145,81 @@ function Home() {
         </div>
       </section>
 
-        {/* rekomendasi */}
+      {/* rekomendasi */}
 
-    <section class="bg-merah-hati mt-1 py-4 h-max flex ">
-      <div className="flex flex-row max-h-fit p-10 ">
-    <div class="mr-5 w-30 h-full transform transition-transform hover:scale-110 mr-4 ml-4">
-        <img src={Avatar} className="w-full h-29 object-cover" alt="Avatar" />
-        <h4 class="text-white text-center pt-4 w-28"> Avatar </h4>
-    </div>
+      <section class="bg-merah-hati mt-1 py-4 h-max flex ">
+        <div className="flex flex-row max-h-fit p-10 ">
+          <div class="mr-5 w-30 h-full transform transition-transform hover:scale-110 mr-4 ml-4">
+            <img
+              src={Avatar}
+              className="w-full h-29 object-cover"
+              alt="Avatar"
+            />
+            <h4 class="text-white text-center pt-4 w-28"> Avatar </h4>
+          </div>
 
-    <div class="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4">
-        <img src={TopGun} className="w-full h-39" alt="Top Gun" />
-        <h4 class="text-white text-center pt-4  w-28 h-10"> Top Gun : Maverick </h4>
-    </div>
+          <div class="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4">
+            <img src={TopGun} className="w-full h-39" alt="Top Gun" />
+            <h4 class="text-white text-center pt-4  w-28 h-10">
+              {" "}
+              Top Gun : Maverick{" "}
+            </h4>
+          </div>
 
-    <div class="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4">
-        <img src={Avegare} className="w-full h-39" alt="Avengers" />
-        <h4 class="text-white text-center pt-4  w-28 h-10"> AVENGERS INFINITY WAR </h4>
-    </div>
+          <div class="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4">
+            <img src={Avegare} className="w-full h-39" alt="Avengers" />
+            <h4 class="text-white text-center pt-4  w-28 h-10">
+              {" "}
+              AVENGERS INFINITY WAR{" "}
+            </h4>
+          </div>
 
-    <div class="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4">
-        <img src={Spidermen} className="w-full h-39" alt="spiderman" />
-        <h4 class="text-white text-center pt-4  w-28 h-10">SPIDER-MAN NO WAY HOME  </h4>
-    </div> 
-  
-   <div class="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4">
-        <img src={Warewolf} className="w-full h-39" alt="warewolf" />
-        <h4 class="text-white text-center pt-4  w-28 h-10">WEREWOLF BY NIGHT  </h4>
-    </div>
-    <div class="mr-5 w-30 h-full transform transition-transform hover:scale-110 mr-4 ml-4">
-        <img src={Avatar} className="w-full h-29 object-cover" alt="Avatar" />
-        <h4 class="text-white text-center pt-4 w-28"> Avatar </h4>
-    </div>
+          <div class="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4">
+            <img src={Spidermen} className="w-full h-39" alt="spiderman" />
+            <h4 class="text-white text-center pt-4  w-28 h-10">
+              SPIDER-MAN NO WAY HOME{" "}
+            </h4>
+          </div>
 
-    <div class="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4">
-        <img src={TopGun} className="w-full h-39" alt="Top Gun" />
-        <h4 class="text-white text-center pt-4  w-28 h-10"> Top Gun : Maverick </h4>
-    </div>
- 
-    <div class="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4">
-        <img src={Avegare} className="w-full h-39" alt="Avengers" />
-        <h4 class="text-white text-center pt-4  w-28 h-10"> AVENGERS INFINITY WAR </h4>
-    </div>
+          <div class="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4">
+            <img src={Warewolf} className="w-full h-39" alt="warewolf" />
+            <h4 class="text-white text-center pt-4  w-28 h-10">
+              WEREWOLF BY NIGHT{" "}
+            </h4>
+          </div>
+          <div class="mr-5 w-30 h-full transform transition-transform hover:scale-110 mr-4 ml-4">
+            <img
+              src={Avatar}
+              className="w-full h-29 object-cover"
+              alt="Avatar"
+            />
+            <h4 class="text-white text-center pt-4 w-28"> Avatar </h4>
+          </div>
 
-    </div>
+          <div class="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4">
+            <img src={TopGun} className="w-full h-39" alt="Top Gun" />
+            <h4 class="text-white text-center pt-4  w-28 h-10">
+              {" "}
+              Top Gun : Maverick{" "}
+            </h4>
+          </div>
 
+          <div class="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4">
+            <img src={Avegare} className="w-full h-39" alt="Avengers" />
+            <h4 class="text-white text-center pt-4  w-28 h-10">
+              {" "}
+              AVENGERS INFINITY WAR{" "}
+            </h4>
+          </div>
+        </div>
       </section>
+
+    {/* Navbar 2 or divider */}
+    
+  <MainContent/>
+
+    <Footer/>
+
     </>
   );
 }

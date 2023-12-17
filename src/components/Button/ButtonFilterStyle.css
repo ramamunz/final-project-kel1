@@ -1,0 +1,54 @@
+.btn-filter{
+    text-align: start;
+    background-color: #171616;
+    padding: 10px 25px;
+    width: 140px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: 1px solid #fff;
+    text-transform: uppercase;
+}
+
+/* ButtonFilterStyle.css */
+
+.button-filter-container {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    background-color: #252525;
+    border-radius: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 8px 40px;
+    margin: 4px 0 0;
+    list-style: none;
+    width: max-content;
+}
+
+.dropdown-options li {
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.dropdown-options li:hover {
+    background-color: #f0f0f0;
+}
+
+.columns-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.column-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.options-column {
+    list-style: none;
+}
