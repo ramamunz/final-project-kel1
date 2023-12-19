@@ -1,0 +1,53 @@
+/* CarouselStyles.css */
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slick-slide img {
+  width: 100%;
+  object-fit: cover;
+  padding: 0 20px;
+}
+
+.slick-track {
+  display: flex;
+}
+
+.slick-list {
+  width: 100%;
+  overflow: visible !important;
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 1;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.watch-trailer-action {
+  position: absolute;
+  top: 350px;
+  left: 10%;
+}
+
+.watch-trailer-action img{
+    width: 40px;
+    padding: 0;
+}
+
