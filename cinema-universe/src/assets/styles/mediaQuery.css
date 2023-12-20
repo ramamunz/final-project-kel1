@@ -1,0 +1,19 @@
+
+
+@media (min-width: 1441px) {
+    .nav-container {
+      overflow: hidden;
+    }
+  }
+  
+  @media (min-width: 320px) {
+    .rekomendasi-container {
+      overflow: scroll;
+    }
+  
+    .rekomendasi-container::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  
+  

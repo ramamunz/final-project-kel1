@@ -7,7 +7,18 @@ import Avatar from "../assets/avatar.png";
 import Avegare from "../assets/avengers.png";
 import TopGun from "../assets/top gun maverick.png"
 import Spidermen from "../assets/spider man.png"
-import Warewolf from "../assets/werewolf.png"
+import werewolf from "../assets/werewolf.png"
+import DontWoryDarling from "../assets/dont worry darling.png"
+import onceuponatimeinhollywood from "../assets/once upon a time in hollywood.png"
+import gotgholidayspecial from "../assets/gotg holiday special.png"
+import BlackBird from "../assets/black bird.png"
+import TheBoys from "../assets/the boys.png"
+import TGreat from "../assets/the greatest showman.png"
+import BladeRunner from "../assets/blade runner.png"
+
+
+
+import "../assets/styles/mediaQuery.css"
 
 import { FaStar, FaPlay, FaPlus } from "react-icons/fa";
 
@@ -142,7 +153,7 @@ function Home() {
         {/* rekomendasi */}
 
     <section class="bg-merah-hati mt-1 px-4 h-max flex w-screen justify-center">
-      <div className="flex flex-row max-h-fit px-10 py-20">
+      <div className="flex flex-row max-h-fit px-10 py-20 rekomendasi-container">
     <div class="mr-5 w-30 h-full transform transition-transform hover:scale-110 mr-4 ml-4">
         <img src={Avatar} className="w-full h-29 object-cover" alt="Avatar" />
         <h4 class="text-white text-center pt-4 w-28 text-lg"> Avatar </h4>
@@ -164,24 +175,42 @@ function Home() {
     </div> 
   
    <div class="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4">
-        <img src={Warewolf} className="w-full h-39" alt="warewolf" />
-        <h4 class="text-white text-center pt-4  w-28 h-10 text-lg">WEREWOLF BY NIGHT  </h4>
+        <img src={DontWoryDarling} className="w-full h-39" alt="Don't Worry Darling" />
+        <h4 class="text-white text-center pt-4  w-28 h-10 text-lg">Don't Worry Darling  </h4>
     </div>
     <div class="mr-5 w-30 h-full transform transition-transform hover:scale-110 mr-4 ml-4">
-        <img src={Avatar} className="w-full h-29 object-cover" alt="Avatar" />
-        <h4 class="text-white text-center pt-4 w-28 text-lg"> Avatar </h4>
+        <img src={werewolf} className="w-full h-29 object-cover" alt="WEREWOLF" />
+        <h4 class="text-white text-center pt-4 w-28 text-lg"> WEREWOLF </h4>
     </div>
 
     <div class="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4">
-        <img src={TopGun} className="w-full h-39" alt="Top Gun" />
-        <h4 class="text-white text-center pt-4  w-28 h-10 text-lg"> Top Gun : Maverick </h4>
+        <img src={onceuponatimeinhollywood} className="w-full h-39" alt="once upon a time in hollywood" />
+        <h4 class="text-white text-center pt-4  w-28 h-10 text-lg"> once upon a time in hollywood </h4>
     </div>
  
     <div class="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4">
-        <img src={Avegare} className="w-full h-39" alt="Avengers" />
-        <h4 class="text-white text-center pt-4  w-28 h-10 text-lg"> AVENGERS INFINITY WAR </h4>
+        <img src={gotgholidayspecial} className="w-full h-39" alt="GUARDIANS OF THE GALAXY" />
+        <h4 class="text-white text-center pt-4  w-28 h-10 text-lg"> GUARDIANS OF THE GALAXY </h4>
     </div>
 
+    <div class="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4">
+        <img src={BlackBird} className="w-full h-39" alt="BLACK BIRD" />
+        <h4 class="text-white text-center pt-4  w-28 h-10 text-lg"> BLACK BIRD </h4>
+    </div>
+    <div class="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4">
+        <img src={TheBoys} className="w-full h-39" alt="HE BOYS" />
+        <h4 class="text-white text-center pt-4  w-28 h-10 text-lg"> THE BOYS </h4>
+    </div>
+
+    <div class="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4">
+        <img src={TGreat} className="w-full h-39" alt="THE GREATEST SHOWMAN " />
+        <h4 class="text-white text-center pt-4  w-28 h-10 text-lg"> THE GREATEST SHOWMAN </h4>
+    </div>
+
+    <div class="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4">
+        <img src={BladeRunner} className="w-full h-39" alt="BLADE RUNNER 2049" />
+        <h4 class="text-white text-center pt-4  w-28 h-10 text-lg"> BLADE RUNNER 2049 </h4>
+    </div>
 
     </div> 
     
