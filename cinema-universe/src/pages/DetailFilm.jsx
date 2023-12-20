@@ -1,6 +1,7 @@
 import background from './images/background.png'
 import user from './images/user.png'
 import poster from './images/ramonda.png'
+import { FaRegHeart } from "react-icons/fa6";
 
 function DetailFilm (){
   return (
@@ -43,7 +44,7 @@ function DetailFilm (){
 
           <ul className="flex flex-row gap-8 text-lg text-white">
             <li>
-              <a className="font-bold hover:text-xl" href="#">Home</a>
+              <a className="hover:text-xl" href="#">Home</a>
             </li>
             <li>
               <a href="#" className="hover:text-xl">Movies</a>
@@ -77,7 +78,9 @@ function DetailFilm (){
             </div>
           </div>
         </nav>
-
+        <div className='max-w-6xl mx-auto translate-y-[28rem]'>
+          <button class="w-44 h-12 mx-auto rounded text-white border border-white hover:bg-slate-50 hover:border-0 hover:text-slate-950 hover:text-lg flex items-center justify-center gap-2" >Add to Favorite <FaRegHeart /></button>
+        </div>
       </div>
 
 
