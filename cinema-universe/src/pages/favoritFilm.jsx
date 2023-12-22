@@ -169,7 +169,7 @@ function Favorite() {
       </section>
 
       {/* Movie list */}
-      <section className="bg-merah-hati mt-1 py-4">
+      <section className="bg-merah-hati py-4">
         <div className="max-w-screen-xl mx-auto p-10">
           <div className="text-white font-bold text-xl mb-4">My List</div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-8">

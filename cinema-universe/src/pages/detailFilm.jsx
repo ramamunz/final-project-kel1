@@ -1,7 +1,8 @@
 import background from "../assets/img/detailFilm/background.png";
 import user from "../assets/img/detailFilm/user.png";
 import poster from "../assets/img/detailFilm/ramonda.png";
-
+import { FaRegHeart } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 function DetailFilm() {
   return (
     <div>
@@ -100,11 +101,11 @@ function DetailFilm() {
 
           <ul className="flex flex-row gap-8 text-lg text-white">
             <li>
-              <a className="font-bold hover:text-xl" href="#">
+              <Link to="/" className="font-bold hover:text-xl" href="#">
                 Home
-              </a>
+              </Link>
             </li>
-            <li>
+            {/* <li>
               <a href="#" className="hover:text-xl">
                 Movies
               </a>
@@ -113,16 +114,16 @@ function DetailFilm() {
               <a href="#" className="hover:text-xl">
                 Series
               </a>
-            </li>
+            </li> */}
             <li>
-              <a href="#" className="hover:text-xl">
+              <Link to="/favoritFilm" href="#" className="hover:text-xl">
                 Favorites
-              </a>
+              </Link>
             </li>
           </ul>
 
           <div className="flex flex-row items-center gap-5">
-            <a href="#" className="hover:w-[26px] hover:h-[26px]">
+            {/* <a href="#" className="hover:w-[26px] hover:h-[26px]">
               <svg
                 width="24"
                 height="24"
@@ -156,7 +157,7 @@ function DetailFilm() {
                   stroke-linejoin="round"
                 />
               </svg>
-            </a>
+            </a> */}
 
             <div className="flex flex-row items-center gap-1">
               <a href="#" className="hover:w-[34px] hover:h-[34px]">
@@ -215,6 +216,13 @@ function DetailFilm() {
               and Everett Ross (Martin Freeman) and forge a new path for the
               kingdom of Wakanda.
             </p>
+            <div className="max-w-6xl mx-auto translate-y-[1rem]">
+              <Link to="/favoritFilm">
+                <button class="w-44 h-12 mx-auto rounded text-white border border-white hover:bg-slate-50 hover:border-0 hover:text-slate-950 hover:text-lg flex items-center justify-center gap-2">
+                  Add to Favorite <FaRegHeart />
+                </button>
+              </Link>
+            </div>
           </div>
 
           <div className="basis-2/5">

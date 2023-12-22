@@ -1,0 +1,134 @@
+/* Login.css */
+.body {
+  margin: 0; /* Menghapus margin bawaan pada body */
+  padding: 0; /* Menghapus padding bawaan pada body */
+  background-color: black; /* Mengatur warna background menjadi hitam */
+}
+
+.login-container {
+  background-color: #252525;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh; /* Memastikan container mengisi seluruh tinggi viewport */
+  margin: 0; /* Menghapus margin bawaan pada container */
+}
+
+.logo {
+  width: 40px; /* Sesuaikan dengan kebutuhan */
+  height: 27px; /* Sesuaikan dengan kebutuhan */
+  margin-right: -40px;
+  margin-top: 7%;
+}
+
+.login-header {
+  text-align: center;
+  margin-right: -30px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  justify-content: center;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-username,
+.input-password {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid white;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+}
+
+.icon-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 58px;
+  margin-right: -50px;
+  background-color: #5d51a8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.forgot-password {
+  color: white;
+  cursor: pointer;
+  margin-left: -20%;
+}
+
+.login-button {
+  width: 350px;
+  padding: 10px;
+  border: 1px solid white;
+  background-color: white;
+  color: #2c3338;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.signup-button {
+  width: 350px;
+  padding: 10px;
+  border: 1px solid white;
+  background-color: white;
+  color: purple;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.signup-button {
+  margin-left: 50px;
+}
+
+.login-button:hover {
+  background-color: #252525;
+}
+
+.signup-button:hover {
+  background-color: #2c3338;
+}
+
+.or-line {
+  width: 20%;
+  height: 1px;
+  background-color: white;
+  text-align: center;
+  margin: 20px 0 20px 50px;
+  position: relative;
+}
+
+.or-text {
+  background-color: black;
+  padding: 0 10px;
+  position: absolute;
+  top: -10px;
+  position: center;
+  color: white;
+  margin-left: -20px;
+}
