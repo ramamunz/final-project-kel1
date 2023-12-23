@@ -46,22 +46,161 @@ import "../../src/assets/img/home/styles/mediaQuery.css";
 import "../../src/assets/img/home/styles/output.css";
 import { Link } from "react-router-dom";
 
+function MovieComponent({ movies }) {
+  return (
+    <div className="flex flex-row max-h-fit p-100 mb-20">
+      {movies.slice(0, 1).map((movie) => (
+        <div
+          key={movie.imdbID}
+          className="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4"
+        >
+          <Link to={"/detailLego"}>
+            <img src={movie.Poster} className="w-full h-39" alt={movie.Title} />
+          </Link>
+          <h4 className="text-white text-center pt-4 w-28">{movie.Title}</h4>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function EscapePlanComponent({ escapeplans }) {
+  return (
+    <div className="flex flex-row max-h-fit p-100">
+      {escapeplans.slice(0, 1).map((escapeplan) => (
+        <div
+          key={escapeplan.imdbID}
+          className="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4"
+        >
+          <Link to={"/detailEscapePlan"}>
+            <img
+              src={escapeplan.Poster}
+              className="w-full h-39"
+              alt={escapeplan.Title}
+            />
+          </Link>
+          <h4 className="text-white text-center pt-4 w-28">
+            {escapeplan.Title}
+          </h4>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function SpongebobComponent({ spongebobs }) {
+  return (
+    <div className="flex flex-row max-h-fit p-100">
+      {spongebobs.slice(2, 3).map((spongebob) => (
+        <div
+          key={spongebob.imdbID}
+          className="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4"
+        >
+          <Link to={"/detailSpongebob"}>
+            <img
+              src={spongebob.Poster}
+              className="w-full h-39"
+              alt={spongebob.Title}
+            />
+          </Link>
+          <h4 className="text-white text-center pt-4 w-28">
+            <h4 className="text-white text-center pt-4 w-28">
+              {spongebob.Title}
+            </h4>
+          </h4>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function ScaryMovieComponent({ scarymovies }) {
+  return (
+    <div className="flex flex-row max-h-fit p-100">
+      {scarymovies.slice(4, 5).map((scarymovie) => (
+        <div
+          key={scarymovie.imdbID}
+          className="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4"
+        >
+          <Link to={"/detailScaryMovie5"}>
+            <img
+              src={scarymovie.Poster}
+              className="w-full h-39"
+              alt={scarymovie.Title}
+            />
+          </Link>
+          <h4 className="text-white text-center pt-4 w-28">
+            <h4 className="text-white text-center pt-4 w-28">
+              {scarymovie.Title}
+            </h4>
+          </h4>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function CarsComponent({ carss }) {
+  return (
+    <div className="flex flex-row max-h-fit p-100">
+      {carss.slice(0, 1).map((cars) => (
+        <div
+          key={cars.imdbID}
+          className="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4"
+        >
+          <Link to={"/detailCars"}>
+            <img src={cars.Poster} className="w-full h-39" alt={cars.Title} />
+          </Link>
+          <h4 className="text-white text-center pt-4 w-28">
+            <h4 className="text-white text-center pt-4 w-28">{cars.Title}</h4>
+          </h4>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 function Home() {
   const [movies, setMovies] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [escapeplans, setEscapePlans] = useState([]);
+  const [spongebobs, setSpongebobs] = useState([]);
+  const [scarymovies, setScaryMovies] = useState([]);
+  const [carss, setCarss] = useState([]);
 
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const response = await fetch(
+        const responseMovies = await fetch(
           "http://www.omdbapi.com/?apikey=53fc65b0&s=movie"
         );
-        const data = await response.json();
-        setMovies(data.Search || []);
+        const dataMovies = await responseMovies.json();
+        setMovies(dataMovies.Search || []);
+
+        const responseEscapePlan = await fetch(
+          "https://www.omdbapi.com/?apikey=53fc65b0&s=Escape%20Plan"
+        );
+        const dataEscapePlan = await responseEscapePlan.json();
+        setEscapePlans(dataEscapePlan.Search || []);
+
+        const responseSpongebob = await fetch(
+          "https://www.omdbapi.com/?apikey=53fc65b0&s=spongebob"
+        );
+        const dataSpongebob = await responseSpongebob.json();
+        setSpongebobs(dataSpongebob.Search || []);
+
+        const responseScaryMovie = await fetch(
+          "https://www.omdbapi.com/?apikey=53fc65b0&s=scary%20movie"
+        );
+        const dataScaryMovie = await responseScaryMovie.json();
+        setScaryMovies(dataScaryMovie.Search || []);
+
+        const responseCars = await fetch(
+          "https://www.omdbapi.com/?apikey=53fc65b0&s=cars"
+        );
+        const dataCars = await responseCars.json();
+        setCarss(dataCars.Search || []);
       } catch (error) {
         console.error("Error fetching movies:", error);
-      } finally {
-        setIsLoading(false);
       }
     };
 
@@ -143,45 +282,27 @@ function Home() {
 
   return (
     <>
+      {/* Navbar */}
       <nav className="p-3 w-full bg-merah-hati sticky top-0 z-50 bg-opacity-100">
         <div className="flex flex-row justify-between items-center">
           <div></div>
-
           <div>
             <ul className="flex flex-row space-x-4">
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/"
                   className="relative inline-flex items-center justify-center p-0.5  text-center text-sm text-white rounded-full group bg-gradient-to-r from-merah-hati to-merah-cerah"
                 >
                   <span className="rounded-full relative w-24  transition-all py-1 bg-white dark:bg-merah-hati group-hover:bg-opacity-0">
                     Home
                   </span>
-                </a>
+                </Link>
               </li>
-              {/* <li>
-                <a
-                  href="#"
-                  className="relative inline-flex items-center justify-center p-0.5  text-center text-sm text-white rounded-full group bg-gradient-to-r from-merah-hati to-merah-cerah"
-                >
-                  <span className="rounded-full relative w-24  transition-all py-1 bg-white dark:bg-merah-hati group-hover:bg-opacity-0">
-                    Movies
-                  </span>
-                </a>
-              </li> */}
               <li>
-                <img src={CUHomeLogo} alt="logo" />
+                <Link to="/">
+                  <img src={CUHomeLogo} alt="logo" />
+                </Link>
               </li>
-              {/* <li>
-                <a
-                  href="#"
-                  className="relative inline-flex items-center justify-center p-0.5  text-center text-sm text-white rounded-full group bg-gradient-to-r from-merah-hati to-merah-cerah"
-                >
-                  <span className="rounded-full relative w-24  transition-all py-1 bg-white dark:bg-merah-hati group-hover:bg-opacity-0">
-                    Series
-                  </span>
-                </a>
-              </li> */}
               <li>
                 <Link
                   to="/favoritFilm"
@@ -221,8 +342,7 @@ function Home() {
         </div>
       </nav>
 
-      {/* banner */}
-
+      {/* Banner */}
       <section className=" bg-merah-hati relative w-full h-screen justify-center items-center overflow-hidden">
         <img src={banner} className="absolute object-cover h-screen w-full" />
 
@@ -230,12 +350,11 @@ function Home() {
           <img src={MarvelLogo} className="py-8 justify-center" />
           <img src={MovieTitle} />
 
-          {/* rating */}
           <div className="flex items-center pt-3">
             <FaStar size={24} color="#ffc107" />
             <FaStar size={24} color="#ffc107" />
             <FaStar size={24} color="#ffc107" />
-            <FaStar size={24} color="#e4e5e9" />
+            <FaStar size={24} color="#ffc107" />
             <FaStar size={24} color="#e4e5e9" />
           </div>
 
@@ -245,14 +364,9 @@ function Home() {
             <span className="px-4"> Sci-Fi</span>
           </h4>
 
-          {/* buttonGroup */}
           <div className="flex pt-4 gap-4">
             <button className="bg-merah-cerah hover:bg-zinc-700 text-white font-bold p-4 rounded-full focus:outline-none focus:shadow-outline">
               <FaPlay size={24} />
-            </button>
-
-            <button className="bg-merah-cerah hover:bg-zinc-700 text-white font-bold p-4 rounded-full focus:outline-none focus:shadow-outline">
-              <FaPlus size={24} />
             </button>
           </div>
 
@@ -269,191 +383,41 @@ function Home() {
       </section>
 
       {/* rekomendasi */}
-
-      {/* <section class="bg-merah-hati mt-1 py-4 h-max flex ">
-        <div className="flex flex-row max-h-fit p-10 ">
-          <div class="mr-5 w-30 h-full transform transition-transform hover:scale-110 mr-4 ml-4">
-            <Link to="/detailFilm">
-              <img
-                src={Avatar}
-                className="w-full h-29 object-cover"
-                alt="Avatar"
-              />
-              <h4 class="text-white text-center pt-4 w-28"> Avatar </h4>
-            </Link>
-          </div>
-
-          <div class="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4">
-            <img src={TopGun} className="w-full h-39" alt="Top Gun" />
-            <h4 class="text-white text-center pt-4  w-28 h-10">
-              {" "}
-              Top Gun : Maverick{" "}
-            </h4>
-          </div>
-
-          <div class="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4">
-            <img src={Avegare} className="w-full h-39" alt="Avengers" />
-            <h4 class="text-white text-center pt-4  w-28 h-10">
-              {" "}
-              AVENGERS INFINITY WAR{" "}
-            </h4>
-          </div>
-
-          <div class="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4">
-            <img src={Spidermen} className="w-full h-39" alt="spiderman" />
-            <h4 class="text-white text-center pt-4  w-28 h-10">
-              SPIDER-MAN NO WAY HOME{" "}
-            </h4>
-          </div>
-
-          <div class="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4">
-            <img
-              src={DontWoryDarling}
-              className="w-full h-39"
-              alt="Don't Worry Darling"
-            />
-            <h4 class="text-white text-center pt-4  w-28 h-10 text-lg">
-              Don't Worry Darling{" "}
-            </h4>
-          </div>
-
-          <div class="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4">
-            <img src={werewolf} className="w-full h-39" alt="warewolf" />
-            <h4 class="text-white text-center pt-4  w-28 h-10">
-              WEREWOLF BY NIGHT{" "}
-            </h4>
-          </div>
-
-          <div class="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4">
-            <img
-              src={onceuponatimeinhollywood}
-              className="w-full h-39"
-              alt="once upon a time in hollywood"
-            />
-            <h4 class="text-white text-center pt-4  w-28 h-10 text-lg">
-              {" "}
-              once upon a time in hollywood{" "}
-            </h4>
-          </div>
-
-          <div class="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4">
-            <img
-              src={gotgholidayspecial}
-              className="w-full h-39"
-              alt="GUARDIANS OF THE GALAXY"
-            />
-            <h4 class="text-white text-center pt-4  w-28 h-10 text-lg">
-              {" "}
-              GUARDIANS OF THE GALAXY{" "}
-            </h4>
-          </div>
-
-          <div class="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4">
-            <img src={BlackBird} className="w-full h-39" alt="BLACK BIRD" />
-            <h4 class="text-white text-center pt-4  w-28 h-10 text-lg">
-              {" "}
-              BLACK BIRD{" "}
-            </h4>
-          </div>
-          <div class="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4">
-            <img src={TheBoys} className="w-full h-39" alt="HE BOYS" />
-            <h4 class="text-white text-center pt-4  w-28 h-10 text-lg">
-              {" "}
-              THE BOYS{" "}
-            </h4>
-          </div>
-
-          <div class="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4">
-            <img
-              src={TGreat}
-              className="w-full h-39"
-              alt="THE GREATEST SHOWMAN "
-            />
-            <h4 class="text-white text-center pt-4  w-28 h-10 text-lg">
-              {" "}
-              THE GREATEST SHOWMAN{" "}
-            </h4>
-          </div>
-
-          <div class="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4">
-            <img
-              src={BladeRunner}
-              className="w-full h-39"
-              alt="BLADE RUNNER 2049"
-            />
-            <h4 class="text-white text-center pt-4  w-28 h-10 text-lg">
-              {" "}
-              BLADE RUNNER 2049{" "}
-            </h4>
+      <section className="bg-merah-hati mt-1 py-20 h-max flex">
+        <div className="flex flex-row max-h-fit p-100 mb-20">
+          <MovieComponent movies={movies} />
+        </div>
+        <div className="flex flex-row max-h-fit p-100 mb-20">
+          <div className="flex flex-row max-h-fit p-100 mb-20">
+            {movies.slice(2, 3).map((movie) => (
+              <div
+                key={movie.imdbID}
+                className="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4"
+              >
+                <Link to={"/detailelCamino"}>
+                  <img
+                    src={movie.Poster}
+                    className="w-full h-39"
+                    alt={movie.Title}
+                  />
+                </Link>
+                <h4 className="text-white text-center pt-4 w-28">
+                  {movie.Title}
+                </h4>
+              </div>
+            ))}
           </div>
         </div>
-      </section> */}
-
-      <section className="bg-merah-hati mt-1 py-4 h-max flex">
         <div className="flex flex-row max-h-fit p-100">
-          {movies.slice(0, 1).map((movie) => (
+          <EscapePlanComponent escapeplans={escapeplans} />
+        </div>
+        <div className="flex flex-row max-h-fit p-100">
+          {movies.slice(9, 10).map((movie) => (
             <div
               key={movie.imdbID}
               className="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4"
             >
-              <Link to={"/detailFilm"}>
-                <img
-                  src={movie.Poster}
-                  className="w-full h-39"
-                  alt={movie.Title}
-                />
-              </Link>
-              <h4 className="text-white text-center pt-4 w-28">
-                {movie.Title}
-              </h4>
-            </div>
-          ))}
-        </div>
-        <div className="flex flex-row max-h-fit p-100">
-          {movies.slice(1, 2).map((movie) => (
-            <div
-              key={movie.imdbID}
-              className="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4"
-            >
-              <Link to={"/detailFilm"}>
-                <img
-                  src={movie.Poster}
-                  className="w-full h-39"
-                  alt={movie.Title}
-                />
-              </Link>
-              <h4 className="text-white text-center pt-4 w-28">
-                {movie.Title}
-              </h4>
-            </div>
-          ))}
-        </div>
-        <div className="flex flex-row max-h-fit p-100">
-          {movies.slice(2, 3).map((movie) => (
-            <div
-              key={movie.imdbID}
-              className="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4"
-            >
-              <Link to={"/detailFilm"}>
-                <img
-                  src={movie.Poster}
-                  className="w-full h-39"
-                  alt={movie.Title}
-                />
-              </Link>
-              <h4 className="text-white text-center pt-4 w-28">
-                {movie.Title}
-              </h4>
-            </div>
-          ))}
-        </div>
-        <div className="flex flex-row max-h-fit p-100">
-          {movies.slice(3, 4).map((movie) => (
-            <div
-              key={movie.imdbID}
-              className="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4"
-            >
-              <Link to={"/detailFilm"}>
+              <Link to={"/detailScaryMovie4"}>
                 <img
                   src={movie.Poster}
                   className="w-full h-39"
@@ -472,7 +436,7 @@ function Home() {
               key={movie.imdbID}
               className="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4"
             >
-              <Link to={"/detailFilm"}>
+              <Link to={"/detailMarioBros"}>
                 <img
                   src={movie.Poster}
                   className="w-full h-39"
@@ -486,42 +450,10 @@ function Home() {
           ))}
         </div>
         <div className="flex flex-row max-h-fit p-100">
-          {movies.slice(5, 6).map((movie) => (
-            <div
-              key={movie.imdbID}
-              className="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4"
-            >
-              <Link to={"/detailFilm"}>
-                <img
-                  src={movie.Poster}
-                  className="w-full h-39"
-                  alt={movie.Title}
-                />
-              </Link>
-              <h4 className="text-white text-center pt-4 w-28">
-                {movie.Title}
-              </h4>
-            </div>
-          ))}
+          <SpongebobComponent spongebobs={spongebobs} />
         </div>
         <div className="flex flex-row max-h-fit p-100">
-          {movies.slice(6, 7).map((movie) => (
-            <div
-              key={movie.imdbID}
-              className="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4"
-            >
-              <Link to={"/detailFilm"}>
-                <img
-                  src={movie.Poster}
-                  className="w-full h-39"
-                  alt={movie.Title}
-                />
-              </Link>
-              <h4 className="text-white text-center pt-4 w-28">
-                {movie.Title}
-              </h4>
-            </div>
-          ))}
+          <ScaryMovieComponent scarymovies={scarymovies} />
         </div>
         <div className="flex flex-row max-h-fit p-100">
           {movies.slice(7, 8).map((movie) => (
@@ -529,7 +461,7 @@ function Home() {
               key={movie.imdbID}
               className="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4"
             >
-              <Link to={"/detailFilm"}>
+              <Link to={"/detailTheLegoBatman"}>
                 <img
                   src={movie.Poster}
                   className="w-full h-39"
@@ -543,39 +475,23 @@ function Home() {
           ))}
         </div>
         <div className="flex flex-row max-h-fit p-100">
-          {movies.slice(8, 9).map((movie) => (
-            <div
-              key={movie.imdbID}
-              className="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4"
-            >
-              <Link to={"/detailFilm"}>
-                <img
-                  src={movie.Poster}
-                  className="w-full h-39"
-                  alt={movie.Title}
-                />
-              </Link>
-              <h4 className="text-white text-center pt-4 w-28">
-                {movie.Title}
-              </h4>
-            </div>
-          ))}
+          <CarsComponent carss={carss} />
         </div>
         <div className="flex flex-row max-h-fit p-100">
-          {movies.slice(9, 10).map((movie) => (
+          {escapeplans.slice(1, 2).map((escapeplan) => (
             <div
-              key={movie.imdbID}
+              key={escapeplan.imdbID}
               className="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4"
             >
-              <Link to={"/detailFilm"}>
+              <Link to={"/detailEscapePlan2"}>
                 <img
-                  src={movie.Poster}
+                  src={escapeplan.Poster}
                   className="w-full h-39"
-                  alt={movie.Title}
+                  alt={escapeplan.Title}
                 />
               </Link>
               <h4 className="text-white text-center pt-4 w-28">
-                {movie.Title}
+                {escapeplan.Title}
               </h4>
             </div>
           ))}

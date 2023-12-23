@@ -6,16 +6,16 @@ import Login from "./pages/SignIn";
 import Signup from "./pages/SignUp";
 import DetailFilm from "./pages/detailFilm";
 import Favorite from "./pages/favoritFilm";
-
-// import React from "react";
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-// import { MovieProvider } from "./components/MovieContext";
-// import "./App.css";
-// import Home from "./pages/Home";
-// import Login from "./pages/SignIn";
-// import Signup from "./pages/SignUp";
-// import DetailFilm from "./pages/detailFilm";
-// import Favorite from "./pages/favoritFilm";
+import DetailLego from "./pages/detail/detailLego";
+import DetailTheLegoBatman from "./pages/detail/detailTheLegoBatman";
+import DetailMarioBros from "./pages/detail/detailMarioBros";
+import DetailElCamino from "./pages/detail/detailelCamino";
+import DetailEscapePlan from "./pages/detail/detailEscapePlan";
+import DetailEscapePlan2 from "./pages/detail/detailEscapePlan2";
+import DetailSpongebob from "./pages/detail/detailSpongebob";
+import DetailScaryMovie4 from "./pages/detail/detailScaryMovie4";
+import DetailScaryMovie5 from "./pages/detail/detailScaryMovie5";
+import DetailCars from "./pages/detail/detailCars";
 
 function App() {
   return (
@@ -25,21 +25,40 @@ function App() {
           <Route path="/" exact element={<Home />} />
           <Route path="/detailFilm" exact element={<DetailFilm />} />
           <Route path="/favoritFilm" exact element={<Favorite />} />
-          <Route path="/SignIn" exact element={<Login />} />☻
-          <Route path="/SignUp" exact element={<Signup />} />☻
+          <Route path="/SignIn" exact element={<Login />} />
+          <Route path="/SignUp" exact element={<Signup />} />
+          <Route path="/detailLego" exact element={<DetailLego />} />
+          <Route
+            path="/detailTheLegoBatman"
+            exact
+            element={<DetailTheLegoBatman />}
+          />
+          <Route path="/detailMarioBros" exact element={<DetailMarioBros />} />
+          <Route path="/detailelCamino" exact element={<DetailElCamino />} />
+          <Route
+            path="/detailEscapePlan"
+            exact
+            element={<DetailEscapePlan />}
+          />
+          <Route
+            path="/detailEscapePlan2"
+            exact
+            element={<DetailEscapePlan2 />}
+          />
+          <Route
+            path="/detailScaryMovie4"
+            exact
+            element={<DetailScaryMovie4 />}
+          />
+          <Route
+            path="/detailScaryMovie5"
+            exact
+            element={<DetailScaryMovie5 />}
+          />
+          <Route path="/detailSpongebob" exact element={<DetailSpongebob />} />
+          <Route path="/detailCars" exact element={<DetailCars />} />
         </Routes>
       </BrowserRouter>
-      {/* <Router>
-        <MovieProvider>
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/detailFilm" component={DetailFilm} />
-            <Route path="/favoritFilm" exact element={<Favorite />} />
-            <Route path="/SignIn" exact element={<Login />} />☻
-            <Route path="/SignUp" exact element={<Signup />} />☻
-          </Switch>
-        </MovieProvider>
-      </Router> */}
     </div>
   );
 }
