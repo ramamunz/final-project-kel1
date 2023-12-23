@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import CUHomeLogo from "../assets/img/favFilm/CU-Home.png";
 import banner from "../assets/img/favFilm/mandalorian 1.png";
@@ -21,7 +21,7 @@ import {
 } from "react-icons/fa";
 
 function Favorite() {
-  const favoriteMovies = [
+  const [favoriteMovies, setFavoriteMovies] = useState([
     { title: "Top Gun: Maverick", image: TopGunM, rating: 4 },
     { title: "Top Gun: Maverick", image: TopGun, rating: 4 },
     { title: "Avengers Infinity War", image: Avengers, rating: 4.5 },
@@ -36,7 +36,13 @@ function Favorite() {
     { title: "Batman v Superman", image: Batman1, rating: 3.5 },
     { title: "Black Bird", image: Black_bird, rating: 4 },
     { title: "Black Panther", image: BlackPanther, rating: 4.5 },
-  ];
+  ]);
+
+  const removeMovie = (index) => {
+    const updatedMovies = [...favoriteMovies];
+    updatedMovies.splice(index, 1);
+    setFavoriteMovies(updatedMovies);
+  };
 
   return (
     <>
@@ -171,7 +177,7 @@ function Favorite() {
       {/* Movie list */}
       <section className="bg-merah-hati py-4">
         <div className="max-w-screen-xl mx-auto p-10">
-          <div className="text-white font-bold text-xl mb-10">My List</div>
+          <div className="text-white font-bold text-xl mb-4">My List</div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-8">
             {favoriteMovies.map((movie, index) => (
               <div
@@ -192,8 +198,10 @@ function Favorite() {
                   <h4 className="text-white font-semi text-lg">
                     {movie.title}
                   </h4>
-                  <button className="mt-auto bg-transparan hover:bg-zinc-700 text-white font-bold p-2 rounded-full focus:outline-none focus:shadow-outline">
-                    <FaBookmark size={15} />
+                  <button
+                  onClick={() => removeMovie(index)} 
+                  className="mt-auto bg-transparan hover:bg-zinc-700 text-white font-bold p-2 rounded-full focus:outline-none focus:shadow-outline">
+                    <FaBookmark size={15} color="#ffc107"/>
                   </button>
                 </div>
               </div>
