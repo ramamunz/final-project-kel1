@@ -20,7 +20,7 @@ import {
   FaBookmarkFill,
 } from "react-icons/fa";
 
-function Favorite() {
+function Favorite( {favoritFilm, setFavoritFilm} ) {
   const favoriteMovies = [
     { title: "Top Gun: Maverick", image: TopGunM, rating: 4 },
     { title: "Top Gun: Maverick", image: TopGun, rating: 4 },
@@ -173,13 +173,13 @@ function Favorite() {
         <div className="max-w-screen-xl mx-auto p-10">
           <div className="text-white font-bold text-xl mb-4">My List</div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-8">
-            {favoriteMovies.map((movie, index) => (
+            {favoritFilm.map(movie => (
               <div
-                key={index}
+                key={movie.id}
                 className="w-full h-48 transform transition-transform hover:scale-110 relative"
               >
                 <img
-                  src={movie.image}
+                  src={movie.poster}
                   className="w-full h-full object-cover rounded-lg"
                   alt={movie.title}
                 />
@@ -189,7 +189,7 @@ function Favorite() {
                     <FaStar size={15} color="#ffc107" />
                     <span className="ml-1 text-white">{movie.rating}</span>
                   </div>
-                  <h4 className="text-white font-semi text-lg">
+                  <h4 className="text-white font-bold text-lg">
                     {movie.title}
                   </h4>
                   <button className="mt-auto bg-transparan hover:bg-zinc-700 text-white font-bold p-2 rounded-full focus:outline-none focus:shadow-outline">
