@@ -182,35 +182,7 @@ function Favorite( {favoritFilm, setFavoritFilm} ) {
       <section className="bg-merah-hati py-4">
         <div className="max-w-screen-xl mx-auto p-10">
           <div className="text-white font-bold text-xl mb-4">My List</div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-8">
-            <div>
-              {favoritFilm.map(movie => (
-                <div
-                  key={movie.id}
-                  className="w-full h-48 transform transition-transform hover:scale-110 relative"
-                >
-                  <img
-                    src={movie.poster}
-                    className="w-full h-full object-cover rounded-lg"
-                    alt={movie.title}
-                  />
-                  <div className="absolute bottom-0 left-0 w-full h-full px-4 pb-4 flex flex-col items-start">
-                    <div className="flex items-start">
-                      {/* Display single star rating */}
-                      <FaStar size={15} color="#ffc107" />
-                      <span className="ml-1 text-white">{movie.rating}</span>
-                    </div>
-                    <h4 className="text-white font-bold text-lg">
-                      {movie.title}
-                    </h4>
-                    <button onClick={() => handleDeleteFavorite(movie.id)} className="mt-auto bg-transparan hover:bg-zinc-700 text-white font-bold p-2 rounded-full focus:outline-none focus:shadow-outline">
-                      <FaBookmark size={15} />
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-8">
               {favoritFilm.map(movie => (
                 <div
                   key={movie.id}
@@ -238,7 +210,6 @@ function Favorite( {favoritFilm, setFavoritFilm} ) {
               ))}
             </div>
           </div>
-        </div>
       </section>
     </>
   );

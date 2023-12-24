@@ -50,7 +50,7 @@ function App() {
             element={<DetailTheLegoBatman />}
           />
           <Route path="/detailMarioBros" exact element={<DetailMarioBros />} />
-          <Route path="/detailelCamino" exact element={<DetailElCamino />} />
+          <Route path="/detailelCamino" exact element={<DetailElCamino favoritFilm={favoriteFilm} setFavoritFilm={setFavoriteFilm} />} />
           <Route
             path="/detailEscapePlan"
             exact

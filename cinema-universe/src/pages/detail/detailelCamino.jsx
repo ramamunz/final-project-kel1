@@ -221,7 +221,7 @@ function DetailElCamino({ favoritFilm, setFavoritFilm }) {
             <div className="max-w-6xl mx-auto translate-y-[1rem]">
               <Link to="/favoritFilm">
                 <button onClick={handleFavoriteFilm} class="w-44 h-12 mx-auto rounded text-white border border-white hover:bg-slate-50 hover:border-0 hover:text-slate-950 hover:text-lg flex items-center justify-center gap-2">
-                {favoritFilm.some(item => item.id === dataFilm.id) ? "Remove from Favorites" : "Add to Favorites"} <FaRegHeart />
+                Add to Favorit <FaRegHeart />
                 </button>
               </Link>
             </div>
