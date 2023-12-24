@@ -1,6 +1,8 @@
 import React from "react";
 import "../assets/img/signIn/css/login.css";
 import Logo from "../assets/img/signIn/image/Logo.png";
+import Frame from "./Frame.png"; // Sesuaikan dengan nama gambar sebenarnya
+import Framee from "./Framee.png"; // Sesuaikan dengan nama gambar sebenarnya
 
 const Login = () => {
   return (
@@ -15,9 +17,7 @@ const Login = () => {
             className="input-username"
           />
           <div className="icon-box">
-            <svg className="icon">
-              <use xlinkHref="#icon-lock"></use>
-            </svg>
+            <img src={Framee} alt="Icon" className="icon" />
           </div>
         </div>
 
@@ -28,9 +28,7 @@ const Login = () => {
             className="input-password"
           />
           <div className="icon-box">
-            <svg className="icon">
-              <use xlinkHref="#icon-lock"></use>
-            </svg>
+            <img src={Frame} alt="Icon" className="icon" />
           </div>
         </div>
 
