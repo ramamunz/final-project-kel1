@@ -9,10 +9,6 @@ import CUHomeLogo from "../assets/img/home/CU-Home.png";
 import MarvelLogo from "../assets/img/home/MARVEL LOGO 1.png";
 import banner from "../assets/img/home/sjblackwidow 1 (1).png";
 import MovieTitle from "../assets/img/home/Black_Widow 1.png";
-import Avatar from "../assets/img/home/avatar.png";
-import Avegare from "../assets/img/home/avengers.png";
-import TopGun from "../assets/img/home/top gun maverick.png";
-import Spidermen from "../assets/img/home/spider man.png";
 import lalaLand from "../assets/img/home/images/lalaland.jpeg";
 import joker from "../assets/img/home/images/joker.png";
 import insteltelar from "../assets/img/home/images/insteltelar.jpeg";
@@ -21,24 +17,6 @@ import menu from "../assets/img/home/icon/menu.png";
 import filterIcon from "../assets/img/home/icon/filter-icon.png";
 import ArrowDown from "../assets/img/home/icon/chevron-right-black.svg";
 import chevronRight from "../assets/img/home/icon/chevron-right.svg";
-import wakandaImg from "../assets/img/home/images/wakanda-forever.png";
-import theMenu from "../assets/img/home/images/the menu 1.png";
-import wednesday from "../assets/img/home/images/wednesday.png";
-import blackAdam from "../assets/img/home/images/black adam 1.png";
-import violentNight from "../assets/img/home/images/violent night 1.png";
-import sheHulk from "../assets/img/home/images/she hulk 1.png";
-import tar from "../assets/img/home/images/tar 1.png";
-import sprited from "../assets/img/home/images/spirited 1.png";
-import womanKing from "../assets/img/home/images/the woman king 1.png";
-import terrifier from "../assets/img/home/images/terrifier 1.png";
-import werewolf from "../assets/img/home/werewolf.png";
-import DontWoryDarling from "../assets/img/home/dont worry darling.png";
-import onceuponatimeinhollywood from "../assets/img/home/once upon a time in hollywood.png";
-import gotgholidayspecial from "../assets/img/home/gotg holiday special.png";
-import BlackBird from "../assets/img/home/black bird.png";
-import TheBoys from "../assets/img/home/the boys.png";
-import TGreat from "../assets/img/home/the greatest showman.png";
-import BladeRunner from "../assets/img/home/blade runner.png";
 import star from "../assets/img/home/icon/star.svg";
 import { FaStar, FaPlay, FaPlus } from "react-icons/fa";
 
@@ -46,126 +24,20 @@ import "../../src/assets/img/home/styles/mediaQuery.css";
 import "../../src/assets/img/home/styles/output.css";
 import { Link } from "react-router-dom";
 
-function MovieComponent({ movies }) {
-  return (
-    <div className="flex flex-row max-h-fit p-100 mb-20">
-      {movies.slice(0, 1).map((movie) => (
-        <div
-          key={movie.imdbID}
-          className="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4"
-        >
-          <Link to={"/detailLego"}>
-            <img src={movie.Poster} className="w-full h-39" alt={movie.Title} />
-          </Link>
-          <h4 className="text-white text-center pt-4 w-28">{movie.Title}</h4>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-function EscapePlanComponent({ escapeplans }) {
-  return (
-    <div className="flex flex-row max-h-fit p-100">
-      {escapeplans.slice(0, 1).map((escapeplan) => (
-        <div
-          key={escapeplan.imdbID}
-          className="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4"
-        >
-          <Link to={"/detailEscapePlan"}>
-            <img
-              src={escapeplan.Poster}
-              className="w-full h-39"
-              alt={escapeplan.Title}
-            />
-          </Link>
-          <h4 className="text-white text-center pt-4 w-28">
-            {escapeplan.Title}
-          </h4>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-function SpongebobComponent({ spongebobs }) {
-  return (
-    <div className="flex flex-row max-h-fit p-100">
-      {spongebobs.slice(2, 3).map((spongebob) => (
-        <div
-          key={spongebob.imdbID}
-          className="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4"
-        >
-          <Link to={"/detailSpongebob"}>
-            <img
-              src={spongebob.Poster}
-              className="w-full h-39"
-              alt={spongebob.Title}
-            />
-          </Link>
-          <h4 className="text-white text-center pt-4 w-28">
-            <h4 className="text-white text-center pt-4 w-28">
-              {spongebob.Title}
-            </h4>
-          </h4>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-function ScaryMovieComponent({ scarymovies }) {
-  return (
-    <div className="flex flex-row max-h-fit p-100">
-      {scarymovies.slice(4, 5).map((scarymovie) => (
-        <div
-          key={scarymovie.imdbID}
-          className="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4"
-        >
-          <Link to={"/detailScaryMovie5"}>
-            <img
-              src={scarymovie.Poster}
-              className="w-full h-39"
-              alt={scarymovie.Title}
-            />
-          </Link>
-          <h4 className="text-white text-center pt-4 w-28">
-            <h4 className="text-white text-center pt-4 w-28">
-              {scarymovie.Title}
-            </h4>
-          </h4>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-function CarsComponent({ carss }) {
-  return (
-    <div className="flex flex-row max-h-fit p-100">
-      {carss.slice(0, 1).map((cars) => (
-        <div
-          key={cars.imdbID}
-          className="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4"
-        >
-          <Link to={"/detailCars"}>
-            <img src={cars.Poster} className="w-full h-39" alt={cars.Title} />
-          </Link>
-          <h4 className="text-white text-center pt-4 w-28">
-            <h4 className="text-white text-center pt-4 w-28">{cars.Title}</h4>
-          </h4>
-        </div>
-      ))}
-    </div>
-  );
-}
-
 function Home() {
   const [movies, setMovies] = useState([]);
   const [escapeplans, setEscapePlans] = useState([]);
   const [spongebobs, setSpongebobs] = useState([]);
   const [scarymovies, setScaryMovies] = useState([]);
   const [carss, setCarss] = useState([]);
+  const [toystorys, setToyStorys] = useState([]);
+  const [findingnemos, setFindingNemos] = useState([]);
+  const [theroundups, setTheRoundups] = useState([]);
+  const [kungfupandas, setKungfuPandas] = useState([]);
+  const [trainstobusans, setTrainToBusans] = useState([]);
+  const [tars, setTars] = useState([]);
+  const [thebig4s, setTheBig4s] = useState([]);
+  const [blackhawkdowns, setBlackHawkDowns] = useState([]);
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -199,6 +71,54 @@ function Home() {
         );
         const dataCars = await responseCars.json();
         setCarss(dataCars.Search || []);
+
+        const responseToyStory = await fetch(
+          "https://www.omdbapi.com/?apikey=53fc65b0&s=toy%20story"
+        );
+        const dataToyStory = await responseToyStory.json();
+        setToyStorys(dataToyStory.Search || []);
+
+        const responseFindingNemo = await fetch(
+          "https://www.omdbapi.com/?apikey=53fc65b0&s=finding%20nemo"
+        );
+        const dataFindingNemo = await responseFindingNemo.json();
+        setFindingNemos(dataFindingNemo.Search || []);
+
+        const responseTheRoundup = await fetch(
+          "https://www.omdbapi.com/?apikey=53fc65b0&s=the%20roundup"
+        );
+        const dataTheRoundup = await responseTheRoundup.json();
+        setTheRoundups(dataTheRoundup.Search || []);
+
+        const responseKungfuPanda = await fetch(
+          "https://www.omdbapi.com/?apikey=53fc65b0&s=kung%20fu%20panda"
+        );
+        const dataKungfuPanda = await responseKungfuPanda.json();
+        setKungfuPandas(dataKungfuPanda.Search || []);
+
+        const responseTrainToBusan = await fetch(
+          "https://www.omdbapi.com/?apikey=53fc65b0&s=train%20to%20busan"
+        );
+        const dataTrainToBusan = await responseTrainToBusan.json();
+        setTrainToBusans(dataTrainToBusan.Search || []);
+
+        const responseTar = await fetch(
+          "https://www.omdbapi.com/?apikey=53fc65b0&s=tar"
+        );
+        const dataTar = await responseTar.json();
+        setTars(dataTar.Search || []);
+
+        const responseTheBig4 = await fetch(
+          "https://www.omdbapi.com/?apikey=53fc65b0&s=the%20big%204"
+        );
+        const dataTheBig4 = await responseTheBig4.json();
+        setTheBig4s(dataTheBig4.Search || []);
+
+        const responseBlackHawkDown = await fetch(
+          "https://omdbapi.com/?apikey=53fc65b0&s=black%20hawk%20down"
+        );
+        const dataBlackHawkDown = await responseBlackHawkDown.json();
+        setBlackHawkDowns(dataBlackHawkDown.Search || []);
       } catch (error) {
         console.error("Error fetching movies:", error);
       }
@@ -385,7 +305,25 @@ function Home() {
       {/* rekomendasi */}
       <section className="bg-merah-hati mt-1 py-20 h-max flex">
         <div className="flex flex-row max-h-fit p-100 mb-20">
-          <MovieComponent movies={movies} />
+          <div className="flex flex-row max-h-fit p-100 mb-20">
+            {movies.slice(0, 1).map((movie) => (
+              <div
+                key={movie.imdbID}
+                className="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4"
+              >
+                <Link to={"/detailLego"}>
+                  <img
+                    src={movie.Poster}
+                    className="w-full h-39"
+                    alt={movie.Title}
+                  />
+                </Link>
+                <h4 className="text-white text-center pt-4 w-28">
+                  {movie.Title}
+                </h4>
+              </div>
+            ))}
+          </div>
         </div>
         <div className="flex flex-row max-h-fit p-100 mb-20">
           <div className="flex flex-row max-h-fit p-100 mb-20">
@@ -409,7 +347,25 @@ function Home() {
           </div>
         </div>
         <div className="flex flex-row max-h-fit p-100">
-          <EscapePlanComponent escapeplans={escapeplans} />
+          <div className="flex flex-row max-h-fit p-100">
+            {escapeplans.slice(0, 1).map((escapeplan) => (
+              <div
+                key={escapeplan.imdbID}
+                className="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4"
+              >
+                <Link to={"/detailEscapePlan"}>
+                  <img
+                    src={escapeplan.Poster}
+                    className="w-full h-39"
+                    alt={escapeplan.Title}
+                  />
+                </Link>
+                <h4 className="text-white text-center pt-4 w-28">
+                  {escapeplan.Title}
+                </h4>
+              </div>
+            ))}
+          </div>
         </div>
         <div className="flex flex-row max-h-fit p-100">
           {movies.slice(9, 10).map((movie) => (
@@ -450,10 +406,51 @@ function Home() {
           ))}
         </div>
         <div className="flex flex-row max-h-fit p-100">
-          <SpongebobComponent spongebobs={spongebobs} />
+          <div className="flex flex-row max-h-fit p-100">
+            {spongebobs.slice(2, 3).map((spongebob) => (
+              <div
+                key={spongebob.imdbID}
+                className="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4"
+              >
+                <Link to={"/detailSpongebob"}>
+                  <img
+                    src={spongebob.Poster}
+                    className="w-full h-39"
+                    alt={spongebob.Title}
+                  />
+                </Link>
+                <h4 className="text-white text-center pt-4 w-28">
+                  <h4 className="text-white text-center pt-4 w-28">
+                    {spongebob.Title}
+                  </h4>
+                </h4>
+              </div>
+            ))}
+          </div>
+          );{" "}
         </div>
         <div className="flex flex-row max-h-fit p-100">
-          <ScaryMovieComponent scarymovies={scarymovies} />
+          <div className="flex flex-row max-h-fit p-100">
+            {scarymovies.slice(4, 5).map((scarymovie) => (
+              <div
+                key={scarymovie.imdbID}
+                className="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4"
+              >
+                <Link to={"/detailScaryMovie5"}>
+                  <img
+                    src={scarymovie.Poster}
+                    className="w-full h-39"
+                    alt={scarymovie.Title}
+                  />
+                </Link>
+                <h4 className="text-white text-center pt-4 w-28">
+                  <h4 className="text-white text-center pt-4 w-28">
+                    {scarymovie.Title}
+                  </h4>
+                </h4>
+              </div>
+            ))}
+          </div>{" "}
         </div>
         <div className="flex flex-row max-h-fit p-100">
           {movies.slice(7, 8).map((movie) => (
@@ -475,7 +472,28 @@ function Home() {
           ))}
         </div>
         <div className="flex flex-row max-h-fit p-100">
-          <CarsComponent carss={carss} />
+          <div className="flex flex-row max-h-fit p-100">
+            {carss.slice(0, 1).map((cars) => (
+              <div
+                key={cars.imdbID}
+                className="mr-5 w-30 h-40 transform transition-transform hover:scale-110 mr-4 ml-4"
+              >
+                <Link to={"/detailCars"}>
+                  <img
+                    src={cars.Poster}
+                    className="w-full h-39"
+                    alt={cars.Title}
+                  />
+                </Link>
+                <h4 className="text-white text-center pt-4 w-28">
+                  <h4 className="text-white text-center pt-4 w-28">
+                    {cars.Title}
+                  </h4>
+                </h4>
+              </div>
+            ))}
+          </div>
+          );{" "}
         </div>
         <div className="flex flex-row max-h-fit p-100">
           {escapeplans.slice(1, 2).map((escapeplan) => (
@@ -589,239 +607,288 @@ function Home() {
           <div className="container ">
             <div className="flex justify-between">
               <p className="underline">populer right now</p>
-              <p className="underline">see all</p>
             </div>
+            {/* Film */}
             <div className="flex flex-wrap mt-10 gap-y-7 justify-center gap-x-16 items-center ">
               <div className="flex flex-row">
-                <div
-                  className="card-movie-content me-4"
-                  style={{ width: "fit-content" }}
-                >
-                  <img
-                    src={wakandaImg}
-                    alt="wakanda"
-                    className="w-32 sm:w-44 rounded-2xl mb-4 sm:mb-0"
-                  />
-                  <p className="mt-3 font-bold uppercase tracking-widest ">
-                    Wakanda Forever
-                  </p>
-                  <div className="rating flex gap-x-1 items-center">
-                    <img src={star} alt="" />
-                    <p className="bold">7.3</p>
-                    <p>|</p>
-                    <p className="capitalize text-gray-500 text-xs">
-                      Action - Movie
-                    </p>
+                {escapeplans.slice(2, 3).map((escapeplan) => (
+                  <div
+                    key={escapeplan.imdbID}
+                    className="card-movie-content me-4"
+                    style={{ width: "fit-content" }}
+                  >
+                    <Link to="/detailEscapePlan3">
+                      <img
+                        src={escapeplan.Poster}
+                        alt={escapeplan.Title}
+                        className="w-32 sm:w-44 rounded-2xl mb-4 sm:mb-0"
+                      />
+                      <p className="mt-3 font-bold uppercase tracking-widest ">
+                        ESCAPE PLAN 3
+                      </p>
+                    </Link>
+                    <div className="rating flex gap-x-1 items-center">
+                      <img src={star} alt="" />
+                      <p className="bold">7.5</p>
+                      <p>|</p>
+                      <p className="capitalize text-gray-500 text-xs">
+                        Drama - Action
+                      </p>
+                    </div>
                   </div>
-                </div>
+                ))}
               </div>
               <div className="flex flex-row">
-                <div
-                  className="card-movie-content me-4"
-                  style={{ width: "fit-content" }}
-                >
-                  <img
-                    src={theMenu}
-                    alt="the Menu"
-                    className="w-32 sm:w-44 rounded-2xl mb-4 sm:mb-0"
-                  />
-                  <p className="mt-3 font-bold uppercase tracking-widest ">
-                    The Menu
-                  </p>
-                  <div className="rating flex gap-x-1 items-center">
-                    <img src={star} alt="" />
-                    <p className="bold">7.5</p>
-                    <p>|</p>
-                    <p className="capitalize text-gray-500 text-xs">
-                      Horror, Thriller - Movie
-                    </p>
+                {carss.slice(1, 2).map((cars) => (
+                  <div
+                    key={cars.imdbID}
+                    className="card-movie-content me-4"
+                    style={{ width: "fit-content" }}
+                  >
+                    <Link to="/detailCars2">
+                      <img
+                        src={cars.Poster}
+                        alt={cars.Title}
+                        className="w-32 sm:w-44 rounded-2xl mb-4 sm:mb-0"
+                      />
+                      <p className="mt-3 font-bold uppercase tracking-widest ">
+                        {cars.Title}
+                      </p>
+                    </Link>
+                    <div className="rating flex gap-x-1 items-center">
+                      <img src={star} alt="" />
+                      <p className="bold">8.0</p>
+                      <p>|</p>
+                      <p className="capitalize text-gray-500 text-xs">
+                        Comedy, Animation
+                      </p>
+                    </div>
                   </div>
-                </div>
+                ))}
               </div>
               <div className="flex flex-row">
-                <div
-                  className="card-movie-content me-4"
-                  style={{ width: "fit-content" }}
-                >
-                  <img
-                    src={wednesday}
-                    alt="Wednesday"
-                    className="w-32 sm:w-44 rounded-2xl mb-4 sm:mb-0"
-                  />
-                  <p className="mt-3 font-bold uppercase tracking-widest ">
-                    Wednesday{" "}
-                    <span className="font-light text-sm">(Series)</span>
-                  </p>
-                  <div className="rating flex gap-x-1 items-center">
-                    <img src={star} alt="" />
-                    <p className="bold">8.5</p>
-                    <p>|</p>
-                    <p className="capitalize text-gray-500 text-xs">
-                      Comedy, Mystery - Movie
-                    </p>
+                {toystorys.slice(0, 1).map((toystory) => (
+                  <div
+                    key={toystory.imdbID}
+                    className="card-movie-content me-4"
+                    style={{ width: "fit-content" }}
+                  >
+                    <Link to="/detailToyStory">
+                      <img
+                        src={toystory.Poster}
+                        alt={toystory.Title}
+                        className="w-32 sm:w-44 rounded-2xl mb-4 sm:mb-0"
+                      />
+                      <p className="mt-3 font-bold uppercase tracking-widest ">
+                        {toystory.Title}
+                      </p>
+                    </Link>
+                    <div className="rating flex gap-x-1 items-center">
+                      <img src={star} alt="" />
+                      <p className="bold">8.5</p>
+                      <p>|</p>
+                      <p className="capitalize text-gray-500 text-xs">
+                        Comedy, Animation
+                      </p>
+                    </div>
                   </div>
-                </div>
+                ))}
               </div>
               <div className="flex flex-row">
-                <div
-                  className="card-movie-content me-4"
-                  style={{ width: "fit-content" }}
-                >
-                  <img
-                    src={blackAdam}
-                    alt="black adam"
-                    className="w-32 h-64 sm:w-44 rounded-2xl mb-4 sm:mb-0"
-                  />
-                  <p className="mt-3 font-bold uppercase tracking-widest ">
-                    The Menu
-                  </p>
-                  <div className="rating flex gap-x-1 items-center">
-                    <img src={star} alt="" />
-                    <p className="bold">4.6</p>
-                    <p>|</p>
-                    <p className="capitalize text-gray-500 text-xs">
-                      Horror, Thriller - Movie
-                    </p>
+                {theroundups.slice(0, 1).map((theroundup) => (
+                  <div
+                    key={theroundup.imdbID}
+                    className="card-movie-content me-4"
+                    style={{ width: "fit-content" }}
+                  >
+                    <Link to="/detailTheRoundUp">
+                      <img
+                        src={theroundup.Poster}
+                        alt={theroundup.Title}
+                        className="w-32 h-64 sm:w-44 rounded-2xl mb-4 sm:mb-0"
+                      />
+                      <p className="mt-3 font-bold uppercase tracking-widest ">
+                        {theroundup.Title}
+                      </p>
+                    </Link>
+                    <div className="rating flex gap-x-1 items-center">
+                      <img src={star} alt="" />
+                      <p className="bold">8.2</p>
+                      <p>|</p>
+                      <p className="capitalize text-gray-500 text-xs">
+                        Action - Gangster - Thriller
+                      </p>
+                    </div>
                   </div>
-                </div>
+                ))}
               </div>
               <div className="flex flex-row">
-                <div
-                  className="card-movie-content me-4"
-                  style={{ width: "fit-content" }}
-                >
-                  <img
-                    src={violentNight}
-                    alt="violent Night"
-                    className="w-32 sm:w-44 rounded-2xl mb-4 sm:mb-0"
-                  />
-                  <p className="mt-3 font-bold uppercase tracking-widest ">
-                    Violent Night
-                  </p>
-                  <div className="rating flex gap-x-1 items-center">
-                    <img src={star} alt="" />
-                    <p className="bold">6.2</p>
-                    <p>|</p>
-                    <p className="capitalize text-gray-500 text-xs">
-                      Comedy, Crime - Movie
-                    </p>
+                {findingnemos.slice(0, 1).map((findingnemo) => (
+                  <div
+                    key={findingnemo.imdbID}
+                    className="card-movie-content me-4"
+                    style={{ width: "fit-content" }}
+                  >
+                    <Link to="/detailFindingNemo">
+                      <img
+                        src={findingnemo.Poster}
+                        alt={findingnemo.Title}
+                        className="w-32 sm:w-44 rounded-2xl mb-4 sm:mb-0"
+                      />
+                      <p className="mt-3 font-bold uppercase tracking-widest ">
+                        {findingnemo.Title}
+                      </p>
+                    </Link>
+                    <div className="rating flex gap-x-1 items-center">
+                      <img src={star} alt="" />
+                      <p className="bold">7.8</p>
+                      <p>|</p>
+                      <p className="capitalize text-gray-500 text-xs">
+                        Comedy, Animation
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div className="flex flex-row  h-[308px] w-[200px]">
-                <div
-                  className="card-movie-content"
-                  style={{ width: "fit-content" }}
-                >
-                  <img
-                    src={sheHulk}
-                    alt="She Hulk"
-                    className="w-32 sm:w-44 rounded-2xl mb-4 sm:mb-0"
-                  />
-                  <p className="font-bold uppercase tracking-widest mt-3">
-                    She-Hulk: <br /> Attorney at law
-                  </p>
-                  <div className="rating flex gap-x-1 items-center">
-                    <img src={star} alt="" />
-                    <p className="bold">5.2</p>
-                    <p>|</p>
-                    <p className="capitalize text-gray-500 text-xs">
-                      Comedy, Adventure - movie
-                    </p>
-                  </div>
-                </div>
+                ))}
               </div>
               <div className="flex flex-row">
-                <div
-                  className="card-movie-content me-4"
-                  style={{ width: "fit-content" }}
-                >
-                  <img
-                    src={tar}
-                    alt="tar"
-                    className="w-32 h-64 sm:w-44 rounded-2xl mb-4 sm:mb-0"
-                  />
-                  <p className="mt-3 font-bold uppercase tracking-widest ">
-                    TAR
-                  </p>
-                  <div className="rating flex gap-x-1 items-center">
-                    <img src={star} alt="" />
-                    <p className="bold">4.6</p>
-                    <p>|</p>
-                    <p className="capitalize text-gray-500 text-xs">
-                      Horror, Thriller - Movie
-                    </p>
+                {kungfupandas.slice(0, 1).map((kungfupanda) => (
+                  <div
+                    key={kungfupanda.imdbID}
+                    className="card-movie-content"
+                    style={{ width: "fit-content" }}
+                  >
+                    <Link to="/detailKungfuPanda">
+                      <img
+                        src={kungfupanda.Poster}
+                        alt={kungfupanda.Title}
+                        className="w-32 sm:w-44 rounded-2xl mb-4 sm:mb-0"
+                      />
+                      <p className="font-bold uppercase tracking-widest mt-3">
+                        {kungfupanda.Title}
+                      </p>
+                    </Link>
+                    <div className="rating flex gap-x-1 items-center">
+                      <img src={star} alt="" />
+                      <p className="bold">7.7</p>
+                      <p>|</p>
+                      <p className="capitalize text-gray-500 text-xs">
+                        Comedy, Animattion
+                      </p>
+                    </div>
                   </div>
-                </div>
+                ))}
               </div>
               <div className="flex flex-row">
-                <div
-                  className="card-movie-content me-4"
-                  style={{ width: "fit-content" }}
-                >
-                  <img
-                    src={sprited}
-                    alt="sprited"
-                    className="w-32 sm:w-44 rounded-2xl mb-4 sm:mb-0"
-                  />
-                  <p className="mt-3 font-bold uppercase tracking-widest ">
-                    sprited
-                  </p>
-                  <div className="rating flex gap-x-1 items-center">
-                    <img src={star} alt="" />
-                    <p className="bold">4.6</p>
-                    <p>|</p>
-                    <p className="capitalize text-gray-500 text-xs">
-                      Comedy, Family - movie
-                    </p>
+                {trainstobusans.slice(0, 1).map((trainstobusan) => (
+                  <div
+                    key={trainstobusan.imdbID}
+                    className="card-movie-content me-4"
+                    style={{ width: "fit-content" }}
+                  >
+                    <Link to="/detailTrainToBusan">
+                      <img
+                        src={trainstobusan.Poster}
+                        alt={trainstobusan.Title}
+                        className="w-32 h-64 sm:w-44 rounded-2xl mb-4 sm:mb-0"
+                      />
+                      <p className="mt-3 font-bold uppercase tracking-widest ">
+                        {trainstobusan.Title}
+                      </p>
+                    </Link>
+                    <div className="rating flex gap-x-1 items-center">
+                      <img src={star} alt="" />
+                      <p className="bold">8.0</p>
+                      <p>|</p>
+                      <p className="capitalize text-gray-500 text-xs">
+                        Horror, Mystery
+                      </p>
+                    </div>
                   </div>
-                </div>
+                ))}
               </div>
               <div className="flex flex-row">
-                <div
-                  className="card-movie-content me-4"
-                  style={{ width: "fit-content" }}
-                >
-                  <img
-                    src={womanKing}
-                    alt="the woman king"
-                    className="w-32 sm:w-44 rounded-2xl mb-4 sm:mb-0"
-                  />
-                  <p className="mt-3 font-bold uppercase tracking-widest ">
-                    The Woman King
-                  </p>
-                  <div className="rating flex gap-x-1 items-center">
-                    <img src={star} alt="" />
-                    <p className="bold">4.6</p>
-                    <p>|</p>
-                    <p className="capitalize text-gray-500 text-xs">
-                      Horror, Thriller - Movie
-                    </p>
+                {tars.slice(0, 1).map((tar) => (
+                  <div
+                    key={tar.imdbID}
+                    className="card-movie-content me-4"
+                    style={{ width: "fit-content" }}
+                  >
+                    <Link to="/detailTar">
+                      <img
+                        src={tar.Poster}
+                        alt={tar.Title}
+                        className="w-32 sm:w-44 rounded-2xl mb-4 sm:mb-0"
+                      />
+                      <p className="mt-3 font-bold uppercase tracking-widest ">
+                        {tar.Title}
+                      </p>
+                    </Link>
+                    <div className="rating flex gap-x-1 items-center">
+                      <img src={star} alt="" />
+                      <p className="bold">7.1</p>
+                      <p>|</p>
+                      <p className="capitalize text-gray-500 text-xs">
+                        Drama - Narrative
+                      </p>
+                    </div>
                   </div>
-                </div>
+                ))}
               </div>
               <div className="flex flex-row">
-                <div
-                  className="card-movie-content me-4"
-                  style={{ width: "fit-content" }}
-                >
-                  <img
-                    src={terrifier}
-                    alt="wakanda"
-                    className="w-32 h-64 sm:w-44 rounded-2xl mb-4 sm:mb-0"
-                  />
-                  <p className="mt-3 font-bold uppercase tracking-widest ">
-                    Terrifier 2
-                  </p>
-                  <div className="rating flex gap-x-2 items-center">
-                    <img src={star} alt="" />
-                    <p className="bold">7.3</p>
-                    <p>|</p>
-                    <p className="capitalize text-gray-500 text-xs">
-                      Action - Movie
-                    </p>
+                {thebig4s.slice(0, 1).map((thebig4) => (
+                  <div
+                    key={thebig4.imdbID}
+                    className="card-movie-content me-4"
+                    style={{ width: "fit-content" }}
+                  >
+                    <Link to="/detailTheBig4">
+                      <img
+                        src={thebig4.Poster}
+                        alt={thebig4.Title}
+                        className="w-32 sm:w-44 rounded-2xl mb-4 sm:mb-0"
+                      />
+                      <p className="mt-3 font-bold uppercase tracking-widest ">
+                        {thebig4.Title}
+                      </p>
+                    </Link>
+                    <div className="rating flex gap-x-1 items-center">
+                      <img src={star} alt="" />
+                      <p className="bold">7.7</p>
+                      <p>|</p>
+                      <p className="capitalize text-gray-500 text-xs">
+                        Action - Comedy
+                      </p>
+                    </div>
                   </div>
-                </div>
+                ))}
+              </div>
+              <div className="flex flex-row">
+                {blackhawkdowns.slice(0, 1).map((blackhawkdown) => (
+                  <div
+                    key={blackhawkdown.imdbID}
+                    className="card-movie-content me-4"
+                    style={{ width: "fit-content" }}
+                  >
+                    <Link to="/detailBlackHawkDown">
+                      <img
+                        src={blackhawkdown.Poster}
+                        alt={blackhawkdown.Title}
+                        className="w-32 sm:w-44 rounded-2xl mb-4 sm:mb-0"
+                      />
+                      <p className="mt-3 font-bold uppercase tracking-widest ">
+                        {blackhawkdown.Title}
+                      </p>
+                    </Link>
+                    <div className="rating flex gap-x-1 items-center">
+                      <img src={star} alt="" />
+                      <p className="bold">7.5</p>
+                      <p>|</p>
+                      <p className="capitalize text-gray-500 text-xs">
+                        War - Horror
+                      </p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -831,23 +898,12 @@ function Home() {
       <section className="footer">
         <div className="footer-container border-t-2 border-white flex justify-center items-center flex-col py-8 bg-merah-hati text-white">
           <p>
-            <span className="me-1">CINEMA UNIVERSE © 2023-2024 -</span>
-            <span className="font-extralight">
-              <a href="#">Blog</a>
-              <span className="font-normal mx-1">-</span>
-              <a href="#">Contact</a>
-              <span className="font-normal mx-1">-</span>
-              <a href="#">Browse Movies</a>
-              <span className="font-normal mx-1">-</span>
-              <a href="#">Request</a>
-              <span className="font-normal mx-1">-</span>
-              <a href="#">Login</a>
-              <span className="font-normal mx-1">-</span>
-              <a href="#">Language</a>
+            <span className="me-1">
+              Created By Kelompok 1 (Motionminds) © CINEMA UNIVERSE 2023-2024
             </span>
           </p>
-          <div className="border-4 border-red-600 text-white  mt-5 px-3 font-bold text-2xl">
-            CU
+          <div className="border-4 border-red-600 text-white  mt-3 px-2 font-bold text-2xl">
+            CINEMA UNIVERSE
           </div>
         </div>
       </section>
