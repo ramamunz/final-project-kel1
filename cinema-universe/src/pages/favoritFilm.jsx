@@ -20,23 +20,11 @@ import {
   FaBookmarkFill,
 } from "react-icons/fa";
 
-function Favorite() {
-  const favoriteMovies = [
-    { title: "Top Gun: Maverick", image: TopGunM, rating: 4 },
-    { title: "Top Gun: Maverick", image: TopGun, rating: 4 },
-    { title: "Avengers Infinity War", image: Avengers, rating: 4.5 },
-    { title: "Spider-Man: No Way Home", image: Spidermen, rating: 5 },
-    { title: "Batman v Superman", image: Batman, rating: 3.5 },
-    { title: "Black Bird", image: Black_bird, rating: 4 },
-    { title: "Black Panther", image: BlackPanther, rating: 4.5 },
-    { title: "Top Gun: Maverick", image: TopGunM, rating: 4 },
-    { title: "Top Gun: Maverick", image: TopGun, rating: 4 },
-    { title: "Avengers Infinity War", image: Avengers, rating: 4.5 },
-    { title: "Spider-Man: No Way Home", image: Spidermen, rating: 5 },
-    { title: "Batman v Superman", image: Batman1, rating: 3.5 },
-    { title: "Black Bird", image: Black_bird, rating: 4 },
-    { title: "Black Panther", image: BlackPanther, rating: 4.5 },
-  ];
+function Favorite({ favoritFilm, setFavoritFilm }) {
+  function handleDeleteFavorite(id) {
+    const newFavorites = favoritFilm.filter((item) => item.id !== id);
+    setFavoritFilm(newFavorites);
+  }
 
   return (
     <>
@@ -57,29 +45,9 @@ function Favorite() {
                   </span>
                 </Link>
               </li>
-              {/* <li>
-                <a
-                  href="#"
-                  className="relative inline-flex items-center justify-center p-0.5  text-center text-sm text-white rounded-full group bg-gradient-to-r from-merah-hati to-merah-cerah"
-                >
-                  <span className="rounded-full relative w-24  transition-all py-1 bg-white dark:bg-merah-hati group-hover:bg-opacity-0">
-                    Movies
-                  </span>
-                </a>
-              </li> */}
               <li>
                 <img src={CUHomeLogo} alt="logo" />
               </li>
-              {/* <li>
-                <a
-                  href="#"
-                  className="relative inline-flex items-center justify-center p-0.5  text-center text-sm text-white rounded-full group bg-gradient-to-r from-merah-hati to-merah-cerah"
-                >
-                  <span className="rounded-full relative w-24  transition-all py-1 bg-white dark:bg-merah-hati group-hover:bg-opacity-0">
-                    Series
-                  </span>
-                </a>
-              </li> */}
               <li>
                 <Link
                   to="/fav-list"
@@ -93,28 +61,7 @@ function Favorite() {
             </ul>
           </div>
           <div>
-            <ul className="flex flex-row gap-2">
-              {/* <li>
-                <a
-                  href="#"
-                  className="relative inline-flex items-center justify-center p-0.5  text-center text-sm text-white rounded-full group bg-gradient-to-r from-merah-hati to-merah-cerah"
-                >
-                  <span className="rounded-full relative w-24  transition-all py-1 bg-white dark:bg-merah-hati group-hover:bg-opacity-0">
-                    Login
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="relative inline-flex items-center justify-center p-0.5  text-center text-sm text-white rounded-full group bg-gradient-to-r from-merah-hati to-merah-cerah"
-                >
-                  <span className="rounded-full relative w-24  transition-all py-1 bg-white dark:bg-merah-hati group-hover:bg-opacity-0">
-                    Register
-                  </span>
-                </a>
-              </li> */}
-            </ul>
+            <ul className="flex flex-row gap-2"></ul>
           </div>
         </div>
       </nav>
@@ -173,13 +120,13 @@ function Favorite() {
         <div className="max-w-screen-xl mx-auto p-10">
           <div className="text-white font-bold text-xl mb-4">My List</div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-8">
-            {favoriteMovies.map((movie, index) => (
+            {favoritFilm.map((movie) => (
               <div
-                key={index}
+                key={movie.id}
                 className="w-full h-48 transform transition-transform hover:scale-110 relative"
               >
                 <img
-                  src={movie.image}
+                  src={movie.poster}
                   className="w-full h-full object-cover rounded-lg"
                   alt={movie.title}
                 />
@@ -189,10 +136,13 @@ function Favorite() {
                     <FaStar size={15} color="#ffc107" />
                     <span className="ml-1 text-white">{movie.rating}</span>
                   </div>
-                  <h4 className="text-white font-semi text-lg">
+                  <h4 className="text-white font-bold text-lg">
                     {movie.title}
                   </h4>
-                  <button className="mt-auto bg-transparan hover:bg-zinc-700 text-white font-bold p-2 rounded-full focus:outline-none focus:shadow-outline">
+                  <button
+                    onClick={() => handleDeleteFavorite(movie.id)}
+                    className="mt-auto bg-transparan hover:bg-zinc-700 text-white font-bold p-2 rounded-full focus:outline-none focus:shadow-outline"
+                  >
                     <FaBookmark size={15} />
                   </button>
                 </div>

@@ -4,7 +4,35 @@ import banner from "../../assets/img/detailFilm/banner/Kungfu Panda.jpg";
 import { FaRegHeart } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
-function DetailKungfuPanda() {
+function DetailKungfuPanda({ favoritFilm, setFavoritFilm }) {
+  const dataFilm = {
+    id: 16,
+    title: "Kung Fu Panda",
+    poster: banner,
+    rating: 4,
+    isFavorite: false,
+  };
+
+  function handleFavoriteFilm() {
+    const payload = {
+      id: dataFilm.id,
+      title: dataFilm.title,
+      poster: dataFilm.poster,
+      rating: dataFilm.rating,
+      isFavorite: !dataFilm.isFavorite,
+    };
+
+    const isFilmInFavorites = favoritFilm.some(
+      (item) => item.id === payload.id
+    );
+
+    if (isFilmInFavorites) {
+      const newFavorites = favoritFilm.filter((item) => item.id !== payload.id);
+      setFavoritFilm(newFavorites);
+    } else {
+      setFavoritFilm([...favoritFilm, payload]);
+    }
+  }
   return (
     <div>
       {/* Bagian Hero */}
@@ -203,8 +231,14 @@ function DetailKungfuPanda() {
             </p>
             <div className="max-w-6xl mx-auto translate-y-[1rem]">
               <Link to="/favoritFilm">
-                <button class="w-44 h-12 mx-auto rounded text-white border border-white hover:bg-slate-50 hover:border-0 hover:text-slate-950 hover:text-lg flex items-center justify-center gap-2">
-                  Add to Favorite <FaRegHeart />
+                <button
+                  onClick={handleFavoriteFilm}
+                  class="w-44 h-12 mx-auto rounded text-white border border-white hover:bg-slate-50 hover:border-0 hover:text-slate-950 hover:text-lg flex items-center justify-center gap-2"
+                >
+                  {favoritFilm.some((item) => item.id === dataFilm.id)
+                    ? "Remove from Favorites"
+                    : "Add to Favorites"}{" "}
+                  <FaRegHeart />
                 </button>
               </Link>
             </div>

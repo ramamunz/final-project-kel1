@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 import "./App.css";
 import Home from "./pages/Home";
 import Login from "./pages/SignIn";
@@ -27,77 +28,230 @@ import DetailTheBig4 from "./pages/detail/detailTheBig4";
 import DetailBlackHawkDown from "./pages/detail/detailBlackHawkDown";
 
 function App() {
+  const [favoriteFilm, setFavoriteFilm] = useState([]);
+  function handleFavoriteFilm(dataFilm) {
+    const payload = {
+      id: dataFilm.id,
+      title: dataFilm.title,
+      poster: dataFilm.poster,
+      rating: dataFilm.rating,
+      isFavorite: !dataFilm.isFavorite,
+    };
+
+    setFavoriteFilm([...favoriteFilm, payload]);
+  }
+
   return (
     <div>
       <BrowserRouter>
         <Routes>
           <Route path="/" exact element={<Home />} />
-          <Route path="/favoritFilm" exact element={<Favorite />} />
+          <Route
+            path="/favoritFilm"
+            exact
+            element={
+              <Favorite
+                favoritFilm={favoriteFilm}
+                setFavoritFilm={setFavoriteFilm}
+              />
+            }
+          />
           <Route path="/SignIn" exact element={<Login />} />
           <Route path="/SignUp" exact element={<Signup />} />
-          <Route path="/detailLego" exact element={<DetailLego />} />
+          <Route
+            path="/detailLego"
+            exact
+            element={
+              <DetailLego
+                favoritFilm={favoriteFilm}
+                setFavoritFilm={setFavoriteFilm}
+              />
+            }
+          />
           <Route
             path="/detailTheLegoBatman"
             exact
-            element={<DetailTheLegoBatman />}
+            element={
+              <DetailTheLegoBatman
+                favoritFilm={favoriteFilm}
+                setFavoritFilm={setFavoriteFilm}
+              />
+            }
           />
-          <Route path="/detailMarioBros" exact element={<DetailMarioBros />} />
-          <Route path="/detailelCamino" exact element={<DetailElCamino />} />
+          <Route
+            path="/detailMarioBros"
+            exact
+            element={
+              <DetailMarioBros
+                favoritFilm={favoriteFilm}
+                setFavoritFilm={setFavoriteFilm}
+              />
+            }
+          />
+          <Route
+            path="/detailelCamino"
+            exact
+            element={
+              <DetailElCamino
+                favoritFilm={favoriteFilm}
+                setFavoritFilm={setFavoriteFilm}
+              />
+            }
+          />
           <Route
             path="/detailEscapePlan"
             exact
-            element={<DetailEscapePlan />}
+            element={
+              <DetailEscapePlan
+                favoritFilm={favoriteFilm}
+                setFavoritFilm={setFavoriteFilm}
+              />
+            }
           />
           <Route
             path="/detailEscapePlan2"
             exact
-            element={<DetailEscapePlan2 />}
+            element={
+              <DetailEscapePlan2
+                favoritFilm={favoriteFilm}
+                setFavoritFilm={setFavoriteFilm}
+              />
+            }
           />
           <Route
             path="/detailEscapePlan3"
             exact
-            element={<DetailEscapePlan3 />}
+            element={
+              <DetailEscapePlan3
+                favoritFilm={favoriteFilm}
+                setFavoritFilm={setFavoriteFilm}
+              />
+            }
           />
           <Route
             path="/detailScaryMovie4"
             exact
-            element={<DetailScaryMovie4 />}
+            element={
+              <DetailScaryMovie4
+                favoritFilm={favoriteFilm}
+                setFavoritFilm={setFavoriteFilm}
+              />
+            }
           />
           <Route
             path="/detailScaryMovie5"
             exact
-            element={<DetailScaryMovie5 />}
+            element={
+              <DetailScaryMovie5
+                favoritFilm={favoriteFilm}
+                setFavoritFilm={setFavoriteFilm}
+              />
+            }
           />
-          <Route path="/detailSpongebob" exact element={<DetailSpongebob />} />
-          <Route path="/detailCars" exact element={<DetailCars />} />
-          <Route path="/detailCars2" exact element={<DetailCars2 />} />
-          <Route path="/detailToyStory" exact element={<DetailToyStory />} />
+          <Route
+            path="/detailSpongebob"
+            exact
+            element={
+              <DetailSpongebob
+                favoritFilm={favoriteFilm}
+                setFavoritFilm={setFavoriteFilm}
+              />
+            }
+          />
+          <Route
+            path="/detailCars"
+            exact
+            element={
+              <DetailCars
+                favoritFilm={favoriteFilm}
+                setFavoritFilm={setFavoriteFilm}
+              />
+            }
+          />
+          <Route
+            path="/detailCars2"
+            exact
+            element={
+              <DetailCars2
+                favoritFilm={favoriteFilm}
+                setFavoritFilm={setFavoriteFilm}
+              />
+            }
+          />
+          <Route
+            path="/detailToyStory"
+            exact
+            element={
+              <DetailToyStory
+                favoritFilm={favoriteFilm}
+                setFavoritFilm={setFavoriteFilm}
+              />
+            }
+          />
           <Route
             path="/detailTheRoundUp"
             exact
-            element={<DetailTheRoundUp />}
+            element={
+              <DetailTheRoundUp
+                favoritFilm={favoriteFilm}
+                setFavoritFilm={setFavoriteFilm}
+              />
+            }
           />
           <Route
             path="/detailFindingNemo"
             exact
-            element={<DetailFindingNemo />}
+            element={
+              <DetailFindingNemo
+                favoritFilm={favoriteFilm}
+                setFavoritFilm={setFavoriteFilm}
+              />
+            }
           />
           <Route
             path="/detailKungfuPanda"
             exact
-            element={<DetailKungfuPanda />}
+            element={
+              <DetailKungfuPanda
+                favoritFilm={favoriteFilm}
+                setFavoritFilm={setFavoriteFilm}
+              />
+            }
           />
           <Route
             path="/detailTrainToBusan"
             exact
             element={<DetailTrainToBusan />}
           />
-          <Route path="/detailTar" exact element={<DetailTar />} />
-          <Route path="/detailTheBig4" exact element={<DetailTheBig4 />} />
+          <Route
+            path="/detailTar"
+            exact
+            element={
+              <DetailTar
+                favoritFilm={favoriteFilm}
+                setFavoritFilm={setFavoriteFilm}
+              />
+            }
+          />
+          <Route
+            path="/detailTheBig4"
+            exact
+            element={
+              <DetailTheBig4
+                favoritFilm={favoriteFilm}
+                setFavoritFilm={setFavoriteFilm}
+              />
+            }
+          />
           <Route
             path="/detailBlackHawkDown"
             exact
-            element={<DetailBlackHawkDown />}
+            element={
+              <DetailBlackHawkDown
+                favoritFilm={favoriteFilm}
+                setFavoritFilm={setFavoriteFilm}
+              />
+            }
           />
         </Routes>
       </BrowserRouter>
