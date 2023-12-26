@@ -1,13 +1,13 @@
 import background from "../../assets/img/detailFilm/background.png";
 import user from "../../assets/img/detailFilm/user.png";
-import banner from "../../assets/img/detailFilm/banner/Spongebob.jpg";
+import banner from "../../assets/img/detailFilm/banner/Train To Busan.jpg";
 import { FaRegHeart } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
-function DetailSpongebob({ favoritFilm, setFavoritFilm }) {
+function DetailTrainToBusan({ favoritFilm, setFavoritFilm }) {
   const dataFilm = {
-    id: 6,
-    title: "Spongebob",
+    id: 17,
+    title: "Train To Busan",
     poster: banner,
     rating: 4,
     isFavorite: false,
@@ -171,7 +171,7 @@ function DetailSpongebob({ favoritFilm, setFavoritFilm }) {
             <p className="mb-3">WATCH TRAILER</p>
             <iframe
               className="w-[30rem] h-96 rounded-md"
-              src="https://www.youtube.com/embed/4zoI4L4x1i0"
+              src="https://www.youtube.com/embed/pyWuHv2-Abk"
             ></iframe>
           </div>
 
@@ -180,7 +180,7 @@ function DetailSpongebob({ favoritFilm, setFavoritFilm }) {
             <p className="mb-3">WATCH MOVIE NOW</p>
             <iframe
               className="w-[32.5rem] h-96 rounded-md"
-              src="https://www.bilibili.tv/id/video/2043259323"
+              src="https://www.bilibili.tv/id/video/2042669125"
               allowFullScreen
             ></iframe>
           </div>
@@ -191,33 +191,31 @@ function DetailSpongebob({ favoritFilm, setFavoritFilm }) {
           <div className="basis-2/5">
             <h1 className="text-lg font-bold mb-3">OVERVIEW</h1>
             <p className="text-base font-normal text-justify">
-              The SpongeBob Movie: Sponge Out of Water adalah sebuah film
-              animasi Amerika Serikat yang tayang pada tahun 2015 dan dirilis
-              pada tanggal 6 Februari 2015. Film ini diproduksi oleh Nickelodeon
-              Movies dan Paramount Animation. Pengisi suara dalam film itu di
-              antaranya adalah aktor serial TV terkenal Tom Kenny, Bill
-              Fagerbakke, Rodger Bumpass, Clancy Brown, dan Carolyn Lawrence.
-              Film ini didedikasikan kepada Ernest Borgnine, pengisi suara
-              Mermaid Man, yang meninggal pada 2012, Juga sekaligus merupakan
-              film terakhir yang melibatkan Stephen Hillenburg sebelum
-              kematiannya pada 2018 dan juga sekaligus pengisian suara terakhir
-              Tim Conway yang meninggal pada 2019.
+              Train to Busan (Hangul: 부산행; RR: Busanhaeng; Hanja: 釜山行,
+              Kereta ke Busan) adalah sebuah film horror seru bertema bencana
+              mayat hidup asal Korea tahun 2016 yang disutradarai oleh Yeon
+              Sang-ho dan dibintangi oleh Gong Yoo, Jung Yu-mi dan Ma Dong-seok.
+              Film tersebut tayang perdana dalam sesi Penayangan Tengah Malam di
+              Festival Film Cannes 2016 pada 13 Mei. Pada 7 Agustus, film
+              tersebut pencetak rekor sebagai film Korea pertama pada 2016 yang
+              memecahkan rekor lebih dari 10 juta penonton.
             </p>
             <br />
             <p className="text-base font-normal text-justify">
-              Seorang bajak laut bernama Burger-Beard menelusuri Bikini Atoll
-              dan mengambil sebuah buku ajaib yang mengabulkan semua yang
-              ditulis di dalamnya. Dengan buku tersebut, Burger-Beard membuat
-              resep rahasia Krabby Patty, yaitu burger yang SpongeBob
-              SquarePants biasa sajikan di Krusty Krab dan makanan favorit
-              penduduk Bikini Bottom, muncul di tangannya. Pada saat itu,
-              Sheldon J. Plankton sedang mencoba mencuri resep tersebut dan
-              hanya SpongeBob yang melihat resep tersebut tiba-tiba menghilang.
-              Penduduk Bikini Bottom yang dipimpin oleh Tuan Krabs, pemilik
-              Krusty Krab, menyalahkan Plankton. Mereka ingin menyiksa Plankton
-              sampai dia memberi tahu ke mana resep tersebut menghilang.
-              SpongeBob menyelamatkan Plankton, sementara Bikini Bottom dilanda
-              kekacauan.
+              Awal cerita Train to Busan adalah ketika sebuah truk pembawa
+              barang diizinkan melewati sebuah daerah yang mengalami kebocoran.
+              Ketika itu, pengendara truk tidak melihat seekor rusa melintas di
+              tengah jalan sehingga rusa yang mati itu berubah menjadi rusa
+              zombie. Seok-Woo, seorang manajer keuangan sebuah perusahaan,
+              berangkat ke Busan bersama anaknya, Su-an, untuk bertemu dengan
+              ibunya sebagai hadiah ulang tahun anak perempuannya. Seok-Woo,
+              yang baru bercerai dengan istrinya, berangkat dengan KTX (kereta
+              api cepat Korea Selatan) dari Seoul bersama para penumpang lain.
+              Ketika kereta akan berangkat, seorang wanita dengan luka di
+              kakinya masuk ke dalam kereta tersebut. Wanita tersebut mencoba
+              menyerang pramugari kereta yang ingin mencoba menolongnya. Sejak
+              itu, wanita itu berubah menjadi zombie yang telah menginfeksi
+              sejumlah besar penumpang kereta.
             </p>
             <div className="max-w-6xl mx-auto translate-y-[1rem]">
               <Link to="/favoritFilm">
@@ -280,4 +278,4 @@ function DetailSpongebob({ favoritFilm, setFavoritFilm }) {
     </div>
   );
 }
-export default DetailSpongebob;
+export default DetailTrainToBusan;

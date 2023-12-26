@@ -10,7 +10,7 @@ function DetailElCamino({ favoritFilm, setFavoritFilm }) {
     title: "El Camino",
     poster: banner,
     rating: 4.5,
-    isFavorite: false
+    isFavorite: false,
   };
 
   function handleFavoriteFilm() {
@@ -19,15 +19,17 @@ function DetailElCamino({ favoritFilm, setFavoritFilm }) {
       title: dataFilm.title,
       poster: dataFilm.poster,
       rating: dataFilm.rating,
-      isFavorite: !dataFilm.isFavorite
+      isFavorite: !dataFilm.isFavorite,
     };
 
     // Check if the film is already in favorites
-    const isFilmInFavorites = favoritFilm.some(item => item.id === payload.id);
+    const isFilmInFavorites = favoritFilm.some(
+      (item) => item.id === payload.id
+    );
 
     if (isFilmInFavorites) {
       // If already in favorites, remove it
-      const newFavorites = favoritFilm.filter(item => item.id !== payload.id);
+      const newFavorites = favoritFilm.filter((item) => item.id !== payload.id);
       setFavoritFilm(newFavorites);
     } else {
       // If not in favorites, add it
@@ -220,8 +222,11 @@ function DetailElCamino({ favoritFilm, setFavoritFilm }) {
             </p>
             <div className="max-w-6xl mx-auto translate-y-[1rem]">
               <Link to="/favoritFilm">
-                <button onClick={handleFavoriteFilm} class="w-44 h-12 mx-auto rounded text-white border border-white hover:bg-slate-50 hover:border-0 hover:text-slate-950 hover:text-lg flex items-center justify-center gap-2">
-                Add to Favorit <FaRegHeart />
+                <button
+                  onClick={handleFavoriteFilm}
+                  class="w-44 h-12 mx-auto rounded text-white border border-white hover:bg-slate-50 hover:border-0 hover:text-slate-950 hover:text-lg flex items-center justify-center gap-2"
+                >
+                  Add to Favorit <FaRegHeart />
                 </button>
               </Link>
             </div>

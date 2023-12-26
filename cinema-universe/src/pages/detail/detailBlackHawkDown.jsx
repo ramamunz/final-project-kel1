@@ -1,13 +1,13 @@
 import background from "../../assets/img/detailFilm/background.png";
 import user from "../../assets/img/detailFilm/user.png";
-import banner from "../../assets/img/detailFilm/banner/Spongebob.jpg";
+import banner from "../../assets/img/detailFilm/banner/Black Hawk Down.jpg";
 import { FaRegHeart } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
-function DetailSpongebob({ favoritFilm, setFavoritFilm }) {
+function DetailBlackHawkDown({ favoritFilm, setFavoritFilm }) {
   const dataFilm = {
-    id: 6,
-    title: "Spongebob",
+    id: 20,
+    title: "Black Hawk Down",
     poster: banner,
     rating: 4,
     isFavorite: false,
@@ -171,7 +171,7 @@ function DetailSpongebob({ favoritFilm, setFavoritFilm }) {
             <p className="mb-3">WATCH TRAILER</p>
             <iframe
               className="w-[30rem] h-96 rounded-md"
-              src="https://www.youtube.com/embed/4zoI4L4x1i0"
+              src="https://www.youtube.com/embed/2GfBkC3qs78"
             ></iframe>
           </div>
 
@@ -180,7 +180,7 @@ function DetailSpongebob({ favoritFilm, setFavoritFilm }) {
             <p className="mb-3">WATCH MOVIE NOW</p>
             <iframe
               className="w-[32.5rem] h-96 rounded-md"
-              src="https://www.bilibili.tv/id/video/2043259323"
+              src="https://www.bilibili.tv/id/video/2008924935"
               allowFullScreen
             ></iframe>
           </div>
@@ -191,33 +191,39 @@ function DetailSpongebob({ favoritFilm, setFavoritFilm }) {
           <div className="basis-2/5">
             <h1 className="text-lg font-bold mb-3">OVERVIEW</h1>
             <p className="text-base font-normal text-justify">
-              The SpongeBob Movie: Sponge Out of Water adalah sebuah film
-              animasi Amerika Serikat yang tayang pada tahun 2015 dan dirilis
-              pada tanggal 6 Februari 2015. Film ini diproduksi oleh Nickelodeon
-              Movies dan Paramount Animation. Pengisi suara dalam film itu di
-              antaranya adalah aktor serial TV terkenal Tom Kenny, Bill
-              Fagerbakke, Rodger Bumpass, Clancy Brown, dan Carolyn Lawrence.
-              Film ini didedikasikan kepada Ernest Borgnine, pengisi suara
-              Mermaid Man, yang meninggal pada 2012, Juga sekaligus merupakan
-              film terakhir yang melibatkan Stephen Hillenburg sebelum
-              kematiannya pada 2018 dan juga sekaligus pengisian suara terakhir
-              Tim Conway yang meninggal pada 2019.
+              Black Hawk Down adalah film drama perang sejarah tahun 2001 yang
+              disutradarai oleh Jerry Bruckheimer dan Ridley Scott. Naskah film
+              ini ditulis oleh Ken Nolan berdasarkan buku Black Hawk Down: A
+              Story of Modern War karya Mark Bowden. Film ini dibintangi oleh
+              Josh Hartnett, Ewan McGregor, Tom Sizemore, Eric Bana, William
+              Fichtner, Ewen Bremner, Sam Shepard dan Nikolaj Coster-Waldau.
+              Film Black Hawk Down ditayangkan secara perdana di Los Angeles
+              pada tanggal 18 Desember 2001 dan dirilis di Britania Raya pada
+              tanggal 18 Januari 2002. Film ini dirilis di Amerika Serikat pada
+              tanggal 28 Desember 2001 secara terbatas dan 18 Januari 2002
+              secara luas. Film ini mendapatkan review positif dari para
+              kritikus.
             </p>
             <br />
             <p className="text-base font-normal text-justify">
-              Seorang bajak laut bernama Burger-Beard menelusuri Bikini Atoll
-              dan mengambil sebuah buku ajaib yang mengabulkan semua yang
-              ditulis di dalamnya. Dengan buku tersebut, Burger-Beard membuat
-              resep rahasia Krabby Patty, yaitu burger yang SpongeBob
-              SquarePants biasa sajikan di Krusty Krab dan makanan favorit
-              penduduk Bikini Bottom, muncul di tangannya. Pada saat itu,
-              Sheldon J. Plankton sedang mencoba mencuri resep tersebut dan
-              hanya SpongeBob yang melihat resep tersebut tiba-tiba menghilang.
-              Penduduk Bikini Bottom yang dipimpin oleh Tuan Krabs, pemilik
-              Krusty Krab, menyalahkan Plankton. Mereka ingin menyiksa Plankton
-              sampai dia memberi tahu ke mana resep tersebut menghilang.
-              SpongeBob menyelamatkan Plankton, sementara Bikini Bottom dilanda
-              kekacauan.
+              Pada tahun 1993, setelah tersingkirnya pemerintahan pusat dan
+              memulai perang saudara, militer besar PBB yang beroperasi di
+              Somalia diberi wewenang dengan mandat menjaga perdamaian. Setelah
+              sebagian besar pasukan perdamaian ditarik, milisi yang bermarkas
+              di Mogadishu dan mengabdi kepada Mohamed Farrah Aidid menyatakan
+              perang terhadap pasukan PBB yang tersisa. Menanggapi pernyataan
+              perang tersebut, Angkatan Darat Amerika Serikat mengerahkan tiga
+              pasukan operasi khusus – 75th Rangers, operator anti-teroris Delta
+              Force dan pilot 160th SOAR / Night Stalkers – ke Mogadishu untuk
+              menangkap Aidid, yang telah mengumumkan dirinya sebagai presiden
+              negara Somalia. Untuk menggabungkan kekuatannya dan menaklukkan
+              penduduk di selatan, Aidid dan milisinya menyita pengiriman
+              makanan Palang Merah, sementara pasukan PBB tidak berdaya untuk
+              terlibat secara langsung. Di luar Mogadishu, 75th Rangers dan
+              Delta Force menangkap Osman Ali Atto (George Harris), seorang
+              pemimpin faksi yang menjual senjata kepada milisi Aidid. Sebuah
+              misi direncanakan untuk menangkap Omar Salad Elmi dan Abdi Hassan
+              Awale Qeybdiid, dua penasihat utama Aidid.
             </p>
             <div className="max-w-6xl mx-auto translate-y-[1rem]">
               <Link to="/favoritFilm">
@@ -280,4 +286,4 @@ function DetailSpongebob({ favoritFilm, setFavoritFilm }) {
     </div>
   );
 }
-export default DetailSpongebob;
+export default DetailBlackHawkDown;

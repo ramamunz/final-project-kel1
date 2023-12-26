@@ -1,13 +1,13 @@
 import background from "../../assets/img/detailFilm/background.png";
 import user from "../../assets/img/detailFilm/user.png";
-import banner from "../../assets/img/detailFilm/banner/Spongebob.jpg";
+import banner from "../../assets/img/detailFilm/banner/Tar.jpg";
 import { FaRegHeart } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
-function DetailSpongebob({ favoritFilm, setFavoritFilm }) {
+function DetailTar({ favoritFilm, setFavoritFilm }) {
   const dataFilm = {
-    id: 6,
-    title: "Spongebob",
+    id: 18,
+    title: "Tar",
     poster: banner,
     rating: 4,
     isFavorite: false,
@@ -171,7 +171,7 @@ function DetailSpongebob({ favoritFilm, setFavoritFilm }) {
             <p className="mb-3">WATCH TRAILER</p>
             <iframe
               className="w-[30rem] h-96 rounded-md"
-              src="https://www.youtube.com/embed/4zoI4L4x1i0"
+              src="https://www.youtube.com/embed/Na6gA1RehsU"
             ></iframe>
           </div>
 
@@ -180,7 +180,7 @@ function DetailSpongebob({ favoritFilm, setFavoritFilm }) {
             <p className="mb-3">WATCH MOVIE NOW</p>
             <iframe
               className="w-[32.5rem] h-96 rounded-md"
-              src="https://www.bilibili.tv/id/video/2043259323"
+              src="https://www.bilibili.tv/id/video/4786921470302726?bstar_from=bstar-web.homepage.recommend.all "
               allowFullScreen
             ></iframe>
           </div>
@@ -191,33 +191,18 @@ function DetailSpongebob({ favoritFilm, setFavoritFilm }) {
           <div className="basis-2/5">
             <h1 className="text-lg font-bold mb-3">OVERVIEW</h1>
             <p className="text-base font-normal text-justify">
-              The SpongeBob Movie: Sponge Out of Water adalah sebuah film
-              animasi Amerika Serikat yang tayang pada tahun 2015 dan dirilis
-              pada tanggal 6 Februari 2015. Film ini diproduksi oleh Nickelodeon
-              Movies dan Paramount Animation. Pengisi suara dalam film itu di
-              antaranya adalah aktor serial TV terkenal Tom Kenny, Bill
-              Fagerbakke, Rodger Bumpass, Clancy Brown, dan Carolyn Lawrence.
-              Film ini didedikasikan kepada Ernest Borgnine, pengisi suara
-              Mermaid Man, yang meninggal pada 2012, Juga sekaligus merupakan
-              film terakhir yang melibatkan Stephen Hillenburg sebelum
-              kematiannya pada 2018 dan juga sekaligus pengisian suara terakhir
-              Tim Conway yang meninggal pada 2019.
-            </p>
-            <br />
-            <p className="text-base font-normal text-justify">
-              Seorang bajak laut bernama Burger-Beard menelusuri Bikini Atoll
-              dan mengambil sebuah buku ajaib yang mengabulkan semua yang
-              ditulis di dalamnya. Dengan buku tersebut, Burger-Beard membuat
-              resep rahasia Krabby Patty, yaitu burger yang SpongeBob
-              SquarePants biasa sajikan di Krusty Krab dan makanan favorit
-              penduduk Bikini Bottom, muncul di tangannya. Pada saat itu,
-              Sheldon J. Plankton sedang mencoba mencuri resep tersebut dan
-              hanya SpongeBob yang melihat resep tersebut tiba-tiba menghilang.
-              Penduduk Bikini Bottom yang dipimpin oleh Tuan Krabs, pemilik
-              Krusty Krab, menyalahkan Plankton. Mereka ingin menyiksa Plankton
-              sampai dia memberi tahu ke mana resep tersebut menghilang.
-              SpongeBob menyelamatkan Plankton, sementara Bikini Bottom dilanda
-              kekacauan.
+              Tár adalah sebuah film drama psikologis Amerika Serikat tahun 2022
+              yang ditulis dan disutradarai oleh Todd Field dan dibintangi oleh
+              Cate Blanchett. Blanchett berperan sebagai Lydia Tár, seorang
+              konduktor terkenal yang terlibat dalam skandal dan mengakhiri
+              kariernya dengan tuduhan pelecehan seksual. Nina Hoss, Noémie
+              Merlant, Sophie Kauer, Julian Glover, Allan Corduner, dan Mark
+              Strong berperan sebagai pendukung. Tár ditayangkan perdana di
+              Festival Film Internasional Venesia ke-79 pada September 2022, dan
+              Blanchett memenangkan Piala Volpi untuk Aktris Terbaik. Film ini
+              memiliki perilisan teatrikal terbatas di Amerika Serikat pada 7
+              Oktober 2022, sebelum bebas tayang pada 28 Oktober, oleh Focus
+              Features.
             </p>
             <div className="max-w-6xl mx-auto translate-y-[1rem]">
               <Link to="/favoritFilm">
@@ -280,4 +265,4 @@ function DetailSpongebob({ favoritFilm, setFavoritFilm }) {
     </div>
   );
 }
-export default DetailSpongebob;
+export default DetailTar;

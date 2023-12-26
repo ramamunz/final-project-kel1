@@ -1,13 +1,13 @@
 import background from "../../assets/img/detailFilm/background.png";
 import user from "../../assets/img/detailFilm/user.png";
-import banner from "../../assets/img/detailFilm/banner/Spongebob.jpg";
+import banner from "../../assets/img/detailFilm/banner/Cars 2.jpg";
 import { FaRegHeart } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
-function DetailSpongebob({ favoritFilm, setFavoritFilm }) {
+function DetailCars2({ favoritFilm, setFavoritFilm }) {
   const dataFilm = {
-    id: 6,
-    title: "Spongebob",
+    id: 12,
+    title: "Cars 2",
     poster: banner,
     rating: 4,
     isFavorite: false,
@@ -171,7 +171,7 @@ function DetailSpongebob({ favoritFilm, setFavoritFilm }) {
             <p className="mb-3">WATCH TRAILER</p>
             <iframe
               className="w-[30rem] h-96 rounded-md"
-              src="https://www.youtube.com/embed/4zoI4L4x1i0"
+              src="https://www.youtube.com/embed/lg5hj2c5Nkk"
             ></iframe>
           </div>
 
@@ -180,7 +180,7 @@ function DetailSpongebob({ favoritFilm, setFavoritFilm }) {
             <p className="mb-3">WATCH MOVIE NOW</p>
             <iframe
               className="w-[32.5rem] h-96 rounded-md"
-              src="https://www.bilibili.tv/id/video/2043259323"
+              src="https://www.bilibili.tv/id/video/2046713524"
               allowFullScreen
             ></iframe>
           </div>
@@ -191,33 +191,28 @@ function DetailSpongebob({ favoritFilm, setFavoritFilm }) {
           <div className="basis-2/5">
             <h1 className="text-lg font-bold mb-3">OVERVIEW</h1>
             <p className="text-base font-normal text-justify">
-              The SpongeBob Movie: Sponge Out of Water adalah sebuah film
-              animasi Amerika Serikat yang tayang pada tahun 2015 dan dirilis
-              pada tanggal 6 Februari 2015. Film ini diproduksi oleh Nickelodeon
-              Movies dan Paramount Animation. Pengisi suara dalam film itu di
-              antaranya adalah aktor serial TV terkenal Tom Kenny, Bill
-              Fagerbakke, Rodger Bumpass, Clancy Brown, dan Carolyn Lawrence.
-              Film ini didedikasikan kepada Ernest Borgnine, pengisi suara
-              Mermaid Man, yang meninggal pada 2012, Juga sekaligus merupakan
-              film terakhir yang melibatkan Stephen Hillenburg sebelum
-              kematiannya pada 2018 dan juga sekaligus pengisian suara terakhir
-              Tim Conway yang meninggal pada 2019.
+              Cars 2 adalah film animasi komputer-3D Amerika Serikat yang
+              diproduksi oleh Pixar Animation Studios dan didistribusikan oleh
+              Walt Disney Studios. Film ini adalah sekuel dari film tahun 2006,
+              Cars. Film ini rilis di Amerika Serikat pada tanggal 24 Juni 2011,
+              di Inggris pada tanggal 22 Juli 2011 dan di Indonesia pada tanggal
+              12 Oktober 2011.
             </p>
             <br />
             <p className="text-base font-normal text-justify">
-              Seorang bajak laut bernama Burger-Beard menelusuri Bikini Atoll
-              dan mengambil sebuah buku ajaib yang mengabulkan semua yang
-              ditulis di dalamnya. Dengan buku tersebut, Burger-Beard membuat
-              resep rahasia Krabby Patty, yaitu burger yang SpongeBob
-              SquarePants biasa sajikan di Krusty Krab dan makanan favorit
-              penduduk Bikini Bottom, muncul di tangannya. Pada saat itu,
-              Sheldon J. Plankton sedang mencoba mencuri resep tersebut dan
-              hanya SpongeBob yang melihat resep tersebut tiba-tiba menghilang.
-              Penduduk Bikini Bottom yang dipimpin oleh Tuan Krabs, pemilik
-              Krusty Krab, menyalahkan Plankton. Mereka ingin menyiksa Plankton
-              sampai dia memberi tahu ke mana resep tersebut menghilang.
-              SpongeBob menyelamatkan Plankton, sementara Bikini Bottom dilanda
-              kekacauan.
+              Mata-mata Inggris Finn McMissile menyelidiki cadangan minyak bumi
+              terbesar di dunia, yang dimiliki oleh sekelompok mobil lemon
+              (mobil yang sudah tidak bekerja dengan baik). Setelah ketahuan,
+              Finn meloloskan diri dan merekayasa kematiannya. Juara Piston Cup
+              4 kali Lightning McQueen kembali ke Radiator Springs dan bereuni
+              dengan sahabatnya Tow Mater dan kekasihnya Sally Carrera. Mantan
+              juragan minyak Sir Miles Axlerod, yang sekarang penganjur tenaga
+              hijau mengumumkan sebuah pertandingan balap yang dinamakan "World
+              Grand Prix" untuk mempromosikan Allinol, bahan bakar bio miliknya.
+              Setelah mobil formula Italia Francesco Bernoulli menantang
+              McQueen, dia dan Mater bersama Luigi, Guido, Fillmore, dan Sarge
+              terbang ke Tokyo, Jepang untuk balapan pertama di World Grand
+              Prix.
             </p>
             <div className="max-w-6xl mx-auto translate-y-[1rem]">
               <Link to="/favoritFilm">
@@ -280,4 +275,4 @@ function DetailSpongebob({ favoritFilm, setFavoritFilm }) {
     </div>
   );
 }
-export default DetailSpongebob;
+export default DetailCars2;

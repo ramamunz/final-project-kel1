@@ -1,13 +1,13 @@
 import background from "../../assets/img/detailFilm/background.png";
 import user from "../../assets/img/detailFilm/user.png";
-import banner from "../../assets/img/detailFilm/banner/Spongebob.jpg";
+import banner from "../../assets/img/detailFilm/banner/Kungfu Panda.jpg";
 import { FaRegHeart } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
-function DetailSpongebob({ favoritFilm, setFavoritFilm }) {
+function DetailKungfuPanda({ favoritFilm, setFavoritFilm }) {
   const dataFilm = {
-    id: 6,
-    title: "Spongebob",
+    id: 16,
+    title: "Kung Fu Panda",
     poster: banner,
     rating: 4,
     isFavorite: false,
@@ -171,7 +171,7 @@ function DetailSpongebob({ favoritFilm, setFavoritFilm }) {
             <p className="mb-3">WATCH TRAILER</p>
             <iframe
               className="w-[30rem] h-96 rounded-md"
-              src="https://www.youtube.com/embed/4zoI4L4x1i0"
+              src="https://www.youtube.com/embed/FQ63rqSRrEI"
             ></iframe>
           </div>
 
@@ -180,7 +180,7 @@ function DetailSpongebob({ favoritFilm, setFavoritFilm }) {
             <p className="mb-3">WATCH MOVIE NOW</p>
             <iframe
               className="w-[32.5rem] h-96 rounded-md"
-              src="https://www.bilibili.tv/id/video/2043259323"
+              src="https://www.bilibili.tv/id/video/2049954879?bstar_from=bstar-web.homepage.recommend.all "
               allowFullScreen
             ></iframe>
           </div>
@@ -191,33 +191,43 @@ function DetailSpongebob({ favoritFilm, setFavoritFilm }) {
           <div className="basis-2/5">
             <h1 className="text-lg font-bold mb-3">OVERVIEW</h1>
             <p className="text-base font-normal text-justify">
-              The SpongeBob Movie: Sponge Out of Water adalah sebuah film
-              animasi Amerika Serikat yang tayang pada tahun 2015 dan dirilis
-              pada tanggal 6 Februari 2015. Film ini diproduksi oleh Nickelodeon
-              Movies dan Paramount Animation. Pengisi suara dalam film itu di
-              antaranya adalah aktor serial TV terkenal Tom Kenny, Bill
-              Fagerbakke, Rodger Bumpass, Clancy Brown, dan Carolyn Lawrence.
-              Film ini didedikasikan kepada Ernest Borgnine, pengisi suara
-              Mermaid Man, yang meninggal pada 2012, Juga sekaligus merupakan
-              film terakhir yang melibatkan Stephen Hillenburg sebelum
-              kematiannya pada 2018 dan juga sekaligus pengisian suara terakhir
-              Tim Conway yang meninggal pada 2019.
+              Kung Fu Panda 2, sadalah film drama komedi-wuxia animasi komputer
+              Amerika 2011 yang diproduksi oleh DreamWorks Animation dan
+              didistribusikan oleh Paramount Pictures. Sekuel Kung Fu Panda
+              2008, ini adalah angsuran kedua dalam warabala Kung Fu Panda, dan
+              disutradarai oleh Jennifer Yuh Nelson dalam debut sutradara. Film
+              ini dibintangi Jack Black, Angelina Jolie, Dustin Hoffman, Seth
+              Rogen, Lucy Liu, David Cross, James Hong, dan Jackie Chan
+              mengulangi peran karakter mereka dari film pertama, dengan Gary
+              Oldman, Michelle Yeoh, Danny McBride, Dennis Haysbert, Jean
+              -Claude Van Damme dan Victor Garber menyuarakan karakter baru.
+              Dalam film itu, Po dan Furious Five bertarung melawan ratu merak
+              putih jahat bernama Lord Shen yang memiliki senjata kuat yang ia
+              rencanakan untuk digunakan untuk menaklukkan Tiongkok. Sementara
+              itu, Po menemukan rahasia yang menakutkan tentang masa lalunya,
+              dan menemukan bahwa Shen ada hubungannya dengan itu.
             </p>
             <br />
             <p className="text-base font-normal text-justify">
-              Seorang bajak laut bernama Burger-Beard menelusuri Bikini Atoll
-              dan mengambil sebuah buku ajaib yang mengabulkan semua yang
-              ditulis di dalamnya. Dengan buku tersebut, Burger-Beard membuat
-              resep rahasia Krabby Patty, yaitu burger yang SpongeBob
-              SquarePants biasa sajikan di Krusty Krab dan makanan favorit
-              penduduk Bikini Bottom, muncul di tangannya. Pada saat itu,
-              Sheldon J. Plankton sedang mencoba mencuri resep tersebut dan
-              hanya SpongeBob yang melihat resep tersebut tiba-tiba menghilang.
-              Penduduk Bikini Bottom yang dipimpin oleh Tuan Krabs, pemilik
-              Krusty Krab, menyalahkan Plankton. Mereka ingin menyiksa Plankton
-              sampai dia memberi tahu ke mana resep tersebut menghilang.
-              SpongeBob menyelamatkan Plankton, sementara Bikini Bottom dilanda
-              kekacauan.
+              Lord Shen, keturunan klan merak yang menguasai Kota Gongmen di
+              Tiongkok kuno, berupaya untuk mempersenjatai kembang api yang baru
+              ditemukan oleh keluarganya. Setelah menemukan dari peramal kambing
+              pengadilan bahwa "seorang pejuang hitam-putih" akan mengalahkannya
+              jika dia tidak mengubah cara hidupnya, Shen memimpin pasukan
+              serigala untuk membasmi populasi panda untuk menghindari ramalan.
+              Orang tua Shen takut dengan kekejaman ini dan mengasingkannya
+              sebagai hukuman.Tiga puluh tahun kemudian, Po menjalani mimpinya
+              sebagai Dragon Warrior, melindungi Lembah Damai bersama
+              teman-temannya dan sesama kung fu master, Furious Five. Namun,
+              gurunya, Shifu mengatakan kepadanya bahwa ia belum mencapai
+              kedamaian batin. Sementara membela sebuah desa dari bandit
+              serigala yang telah mencuri logam untuk Shen, Po terganggu oleh
+              simbol pada baju besi pemimpin mereka, yang menyebabkan dia
+              memiliki kilas balik dari ibunya dan memungkinkan serigala
+              megerjarnya. Po bertanya kepada ayahnya, Tuan Ping, tentang asal
+              usulnya; Ping mengungkapkan bahwa dia menemukan Po sebagai bayi di
+              peti lobak dan mengadopsinya, tetapi Po tetap tidak puas,
+              bertanya-tanya bagaimana dan mengapa dia berakhir di lembah.
             </p>
             <div className="max-w-6xl mx-auto translate-y-[1rem]">
               <Link to="/favoritFilm">
@@ -280,4 +290,4 @@ function DetailSpongebob({ favoritFilm, setFavoritFilm }) {
     </div>
   );
 }
-export default DetailSpongebob;
+export default DetailKungfuPanda;
