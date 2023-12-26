@@ -23,6 +23,7 @@ import { FaStar, FaPlay, FaPlus } from "react-icons/fa";
 import "../../src/assets/img/home/styles/mediaQuery.css";
 import "../../src/assets/img/home/styles/output.css";
 import { Link } from "react-router-dom";
+import { auth } from "../firebase";
 
 function Home() {
   const [movies, setMovies] = useState([]);
@@ -38,6 +39,24 @@ function Home() {
   const [tars, setTars] = useState([]);
   const [thebig4s, setTheBig4s] = useState([]);
   const [blackhawkdowns, setBlackHawkDowns] = useState([]);
+
+  const [user, setUser] = useState(null);
+
+  // untuk mendengarkan perubahan status otentikasi
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      setUser(user);
+    });
+
+    return () => {
+      unsubscribe();
+    };
+  }, []);
+
+  // fungsi untuk menangani logout
+  const handleLogout = () => {
+    auth.signOut();
+  };
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -237,26 +256,48 @@ function Home() {
           </div>
           <div>
             <ul className="flex flex-row gap-2">
-              <li>
-                <a
-                  href="#"
-                  className="relative inline-flex items-center justify-center p-0.5  text-center text-sm text-white rounded-full group bg-gradient-to-r from-merah-hati to-merah-cerah"
-                >
-                  <span className="rounded-full relative w-24  transition-all py-1 bg-white dark:bg-merah-hati group-hover:bg-opacity-0">
-                    Login
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="relative inline-flex items-center justify-center p-0.5  text-center text-sm text-white rounded-full group bg-gradient-to-r from-merah-hati to-merah-cerah"
-                >
-                  <span className="rounded-full relative w-24  transition-all py-1 bg-white dark:bg-merah-hati group-hover:bg-opacity-0">
-                    Register
-                  </span>
-                </a>
-              </li>
+              {user ? (
+                <>
+                  <li>
+                    <span className="text-white">
+                      {user.displayName || user.email}
+                    </span>
+                  </li>
+                  <li>
+                    <button
+                      onClick={handleLogout}
+                      className="relative inline-flex items-center justify-center p-0.5 text-center text-sm text-white rounded-full group bg-gradient-to-r from-merah-hati to-merah-cerah"
+                    >
+                      <span className="rounded-full relative w-24 transition-all py-1 bg-white dark:bg-merah-hati group-hover:bg-opacity-0">
+                        Logout
+                      </span>
+                    </button>
+                  </li>
+                </>
+              ) : (
+                <>
+                  <li>
+                    <Link
+                      to="/SignIn"
+                      className="relative inline-flex items-center justify-center p-0.5 text-center text-sm text-white rounded-full group bg-gradient-to-r from-merah-hati to-merah-cerah"
+                    >
+                      <span className="rounded-full relative w-24 transition-all py-1 bg-white dark:bg-merah-hati group-hover:bg-opacity-0">
+                        Login
+                      </span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/SignUp"
+                      className="relative inline-flex items-center justify-center p-0.5 text-center text-sm text-white rounded-full group bg-gradient-to-r from-merah-hati to-merah-cerah"
+                    >
+                      <span className="rounded-full relative w-24 transition-all py-1 bg-white dark:bg-merah-hati group-hover:bg-opacity-0">
+                        Register
+                      </span>
+                    </Link>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
         </div>

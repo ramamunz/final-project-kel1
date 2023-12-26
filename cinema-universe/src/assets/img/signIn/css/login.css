@@ -1,8 +1,5 @@
-/* Login.css */
-.body {
-  margin: 0; /* Menghapus margin bawaan pada body */
-  padding: 0; /* Menghapus padding bawaan pada body */
-  background-color: black; /* Mengatur warna background menjadi hitam */
+body {
+  background: #252525;
 }
 
 .login-container {
@@ -12,15 +9,12 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  min-height: 100vh; /* Memastikan container mengisi seluruh tinggi viewport */
-  margin: 0; /* Menghapus margin bawaan pada container */
 }
 
 .logo {
   width: 40px; /* Sesuaikan dengan kebutuhan */
-  height: 27px; /* Sesuaikan dengan kebutuhan */
+  height: 30px; /* Sesuaikan dengan kebutuhan */
   margin-right: -40px;
-  margin-top: 7%;
 }
 
 .login-header {
@@ -54,8 +48,9 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 50px;
-  height: 58px;
+  width: 60px;
+  height: 67px;
+  margin-top: 0px;
   margin-right: -50px;
   background-color: #5d51a8;
   display: flex;
@@ -74,12 +69,13 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  color: #c4a5bc;
 }
 
 .forgot-password {
-  color: white;
+  color: #c4a5bc;
   cursor: pointer;
-  margin-left: -20%;
+  margin-right: -15%;
 }
 
 .login-button {
@@ -87,17 +83,19 @@
   padding: 10px;
   border: 1px solid white;
   background-color: white;
-  color: #2c3338;
+  color: #5d51a8;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-family: bold;
 }
+
 .signup-button {
   width: 350px;
   padding: 10px;
-  border: 1px solid white;
-  background-color: white;
-  color: purple;
+  border: 1px solid aqua;
+  background-color: #252525;
+  color: white;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -107,11 +105,11 @@
 }
 
 .login-button:hover {
-  background-color: #252525;
+  background-color: #201e1e;
 }
 
 .signup-button:hover {
-  background-color: #2c3338;
+  background-color: #5d51a8;
 }
 
 .or-line {
@@ -124,7 +122,7 @@
 }
 
 .or-text {
-  background-color: black;
+  background-color: #252525;
   padding: 0 10px;
   position: absolute;
   top: -10px;

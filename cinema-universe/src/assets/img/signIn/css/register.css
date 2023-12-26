@@ -24,14 +24,17 @@
 
 .signup-header {
   text-align: center;
-  margin-right: -30px;
+  margin-right: -40px;
+  font-size: 20px;
 }
 
 .signup-form {
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 500px;
   justify-content: center;
+  margin-right: -35px;
+  margin-top: 10px;
 }
 
 .form-group {
@@ -91,6 +94,7 @@
   cursor: pointer;
   font-size: 20px;
   font-family: bold;
+  margin-bottom: 20px;
 }
 .signup-button {
   margin-left: 50px;
