@@ -3,14 +3,6 @@ import { Link } from "react-router-dom";
 import CUHomeLogo from "../assets/img/favFilm/CU-Home.png";
 import banner from "../assets/img/favFilm/mandalorian 1.png";
 import mandalorianLogo from "../assets/img/favFilm/MandoS3Logo 1.png";
-import TopGunM from "../assets/img/favFilm/TopGun M-2.png";
-import TopGun from "../assets/img/favFilm/TopGun M.png";
-import Avengers from "../assets/img/favFilm/avengers-1.png";
-import Spidermen from "../assets/img/favFilm/Spiderman.png";
-import Batman from "../assets/img/favFilm/Batman v Superman.png";
-import Batman1 from "../assets/img/favFilm/Batman v Superman-2.png";
-import Black_bird from "../assets/img/favFilm/black bird.png";
-import BlackPanther from "../assets/img/favFilm/BlackPanther.png";
 
 import {
   FaStar,
