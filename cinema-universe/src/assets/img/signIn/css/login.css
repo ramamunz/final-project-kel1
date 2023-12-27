@@ -1,0 +1,132 @@
+body {
+  background: #252525;
+}
+
+.login-container {
+  background-color: #252525;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  width: 40px; /* Sesuaikan dengan kebutuhan */
+  height: 30px; /* Sesuaikan dengan kebutuhan */
+  margin-right: -40px;
+}
+
+.login-header {
+  text-align: center;
+  margin-right: -30px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  justify-content: center;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-username,
+.input-password {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid white;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+}
+
+.icon-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 67px;
+  margin-top: 0px;
+  margin-right: -50px;
+  background-color: #5d51a8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  color: #c4a5bc;
+}
+
+.forgot-password {
+  color: #c4a5bc;
+  cursor: pointer;
+  margin-right: -15%;
+}
+
+.login-button {
+  width: 350px;
+  padding: 10px;
+  border: 1px solid white;
+  background-color: white;
+  color: #5d51a8;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: bold;
+}
+
+.signup-button {
+  width: 350px;
+  padding: 10px;
+  border: 1px solid aqua;
+  background-color: #252525;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.signup-button {
+  margin-left: 50px;
+}
+
+.login-button:hover {
+  background-color: #201e1e;
+}
+
+.signup-button:hover {
+  background-color: #5d51a8;
+}
+
+.or-line {
+  width: 20%;
+  height: 1px;
+  background-color: white;
+  text-align: center;
+  margin: 20px 0 20px 50px;
+  position: relative;
+}
+
+.or-text {
+  background-color: #252525;
+  padding: 0 10px;
+  position: absolute;
+  top: -10px;
+  position: center;
+  color: white;
+  margin-left: -20px;
+}
