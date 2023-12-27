@@ -221,7 +221,12 @@ function App() {
           <Route
             path="/detailTrainToBusan"
             exact
-            element={<DetailTrainToBusan />}
+            element={
+              <DetailTrainToBusan
+                favoritFilm={favoriteFilm}
+                setFavoritFilm={setFavoriteFilm}
+              />
+            }
           />
           <Route
             path="/detailTar"
