@@ -18,8 +18,6 @@ const Login = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log(userCredential);
-        // Redirect to the home page after successful login
-
         navigate("/");
       })
       .catch((error) => {
@@ -32,7 +30,6 @@ const Login = () => {
         alert("Invalid email or password. Please Try Again!");
       });
   };
-
   return (
     <div className="login-container">
       <img src={Logo} alt="Logo" className="logo" />
@@ -40,8 +37,8 @@ const Login = () => {
       <form onSubmit={signIn} className="login-form">
         <div className="form-group">
           <input
-            type="email"
-            placeholder="Email"
+            type="text"
+            placeholder="Username"
             className="input-username"
             value={email}
             onChange={(e) => setEmail(e.target.value)}

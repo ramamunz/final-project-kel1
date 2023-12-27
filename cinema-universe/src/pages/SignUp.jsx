@@ -26,62 +26,61 @@ const Signup = () => {
         console.log(error);
       });
   };
-
   return (
     <div className="signup-container">
       <img src={Logo} alt="Logo" className="logo" />
       <h2 className="signup-header">Register</h2>
       <form onSubmit={signUp} className="signup-form">
-        <div className="form-group">
+        <div className="form-group1">
           <input
             type="text"
             placeholder="Full Name"
-            className="input-username"
+            className="input-username1"
             value={fullName}
             onChange={(e) => setFullName(e.target.value)}
           />
-          <svg className="icon">
-            <use xlinkHref="#icon-lock"></use>
+          <svg className="icon1">
+            <use xlinkHref="#1-lock"></use>
           </svg>
         </div>
 
-        <div className="form-group">
+        <div className="form-group1">
           <input
-            type="email"
+            type="text"
             placeholder="Email"
-            className="input-username"
+            className="input-username1"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <svg className="icon">
+          <svg className="icon1">
             <use xlinkHref="#icon-lock"></use>
           </svg>
         </div>
 
-        <div className="form-group">
+        <div className="form-group1">
           <input
             type="password"
             placeholder="Password"
-            className="input-password"
+            className="input-password1"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <svg className="icon">
+          <svg className="icon1">
             <use xlinkHref="#icon-lock"></use>
           </svg>
         </div>
 
-        <div className="form-group">
+        <div className="form-group1">
           <input
             type="password"
             placeholder="Confirm Password"
-            className="input-password"
+            className="input-password1"
           />
-          <svg className="icon">
+          <svg className="icon1">
             <use xlinkHref="#icon-lock"></use>
           </svg>
         </div>
-        <button className="signup-button">Create Account</button>
+        <button className="signup-button1">Create Account</button>
 
         <h2 className="last">
           By clicking “Create Account” you agree to our terms and privacy

@@ -1,7 +1,7 @@
 .body {
-  margin: 0; /* Menghapus margin bawaan pada body */
-  padding: 0; /* Menghapus padding bawaan pada body */
-  background-color: black; /* Mengatur warna background menjadi hitam */
+  margin: 0;
+  padding: 0;
+  background-color: black;
 }
 
 .signup-container {
@@ -11,13 +11,13 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  min-height: 100vh; /* Memastikan container mengisi seluruh tinggi viewport */
-  margin: 0; /* Menghapus margin bawaan pada container */
+  min-height: 100vh;
+  margin: 0;
 }
 
 .logo {
-  width: 40px; /* Sesuaikan dengan kebutuhan */
-  height: 27px; /* Sesuaikan dengan kebutuhan */
+  width: 40px;
+  height: 27px;
   margin-right: -40px;
   margin-top: 7%;
 }
@@ -37,13 +37,13 @@
   margin-top: 10px;
 }
 
-.form-group {
+.form-group1 {
   position: relative;
   margin-bottom: 0%;
 }
 
-.input-username,
-.input-password {
+.input-username1,
+.input-password1 {
   width: 100%;
   padding: 20px;
   border: 1px solid white;
@@ -52,39 +52,13 @@
   border-radius: 15px;
 }
 
-.icon-box {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50px;
-  height: 58px;
-  margin-right: -50px;
-  background-color: #5d51a8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-}
-
-.icon {
+.icon1 {
   width: 20px;
   height: 20px;
   color: white;
 }
 
-.remember-forgot {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-.forgot-password {
-  color: white;
-  cursor: pointer;
-  margin-left: -20%;
-}
-
-.signup-button {
+.signup-button1 {
   width: 80%;
   padding: 15px;
   border: 1px solid rainbow;
@@ -96,11 +70,11 @@
   font-family: bold;
   margin-bottom: 20px;
 }
-.signup-button {
+.signup-button1 {
   margin-left: 50px;
 }
 
-.signup-button:hover {
+.signup-button1:hover {
   background-color: #252525;
 }
 
